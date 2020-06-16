@@ -1,6 +1,11 @@
 <template>
     <div class="header">
             <v-app-bar dense dark >  
+
+                <v-avatar class="mx-3">
+                     <v-img src="/images/IMG_logo.jpg" alt="logo"></v-img>
+                </v-avatar>
+
                 <v-toolbar-title>Page title</v-toolbar-title>
         
                 <v-spacer></v-spacer>

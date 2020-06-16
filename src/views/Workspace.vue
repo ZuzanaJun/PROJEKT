@@ -1,6 +1,9 @@
 <template>
     <div class="workspace">
         <headerbar />
+
+
+
     </div>
 </template>
 
