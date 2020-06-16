@@ -14,8 +14,24 @@
               <v-icon>{{item.icon}}</v-icon>
             </v-list-item-icon>
 
-            <v-list-item-content>
-              <v-list-item-title>{{item.title}}</v-list-item-title>
+            <v-list-item-content :close-on-click="closeOnClick">
+             <v-list-item-action >
+                  <v-btn
+                    absolute top right
+                    icon
+                    @click="menu = false"              
+                  >
+                    <v-icon>mdi-close</v-icon>
+                  </v-btn>
+                </v-list-item-action>
+              <v-list-item-title class="my-3">{{item.title}}</v-list-item-title>
+              <div class="mb-2"> <!-- pozadí pak budou vypsaná cyklem -->
+                <v-img src="/images/background/b002.jpg" alt="pozadí" max-height="100" ></v-img>
+              </div>
+              <div class="mb-2">
+                <v-img src="/images/background/b001.jpg" alt="pozadí" max-height="100" ></v-img>
+              </div>
+           
             </v-list-item-content>
           </v-list-item>
         </v-list>
