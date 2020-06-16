@@ -6,7 +6,7 @@
                      <v-img src="/images/IMG_logo.jpg" alt="logo"></v-img>
                 </v-avatar>
 
-                <v-toolbar-title>Page title</v-toolbar-title>
+                <v-toolbar-title>Kolážovník</v-toolbar-title>
         
                 <v-spacer></v-spacer>
         
