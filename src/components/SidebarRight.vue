@@ -35,13 +35,13 @@ export default {
     data() {
         return {
             colors: [
-                {name: 'white', display: '#fff'},
-                {name: 'yellow', display: '#FFD200'},
-                {name: 'blue', display: '#38B7D0'},
-                {name: 'pink', display: '#FD68D0'},
-                {name: 'red', display: '#DA2900'},
-                {name: 'beige', display: '#FDEEC0'},
                 {name: 'black', display: '#000'},
+                {name: 'beige', display: '#FDEEC0'},
+                {name: 'red', display: '#DA2900'},
+                {name: 'pink', display: '#FD68D0'},
+                {name: 'blue', display: '#38B7D0'},
+                {name: 'yellow', display: '#FFD200'},
+                {name: 'white', display: '#fff'},
             ],
             dataCutouts
         }
