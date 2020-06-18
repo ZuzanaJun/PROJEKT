@@ -31,3 +31,13 @@ export default {
     
 }
 </script>
+
+<style>
+
+.workspace {
+    /* background-image: url('/images/background/workspace2.jpg') ;
+    background-size: cover; */
+    background-color: darkcyan;
+}
+
+</style>

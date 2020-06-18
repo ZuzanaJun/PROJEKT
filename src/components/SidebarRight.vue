@@ -4,10 +4,11 @@
         <div class="cutouts">
             <div 
                 class="cutouts__item"
-                v-for="cut in dataCutouts"
+                v-for="cut in filteredCutouts"
                 v-bind:key="cut.id"
-            >
 
+            >
+                <img v-bind:src="cut.url" class="cutouts__img">
             </div>
         </div>
 
@@ -15,7 +16,7 @@
       <div class="colors-picker">
           <div 
             class="colors-picker__color"
-            v-for="color in colors.reverse()"
+            v-for="color in colors"
             v-bind:key="color.name"
             v-bind:style="{background: color.display, height: `${100 / colors.length}%`}"
             v-on:click="handleClick(color.name)"
@@ -30,6 +31,7 @@
 
 <script>
 import dataCutouts from '../dataCutouts'
+import shuffle from 'lodash.shuffle'
 
 export default {
     data() {
@@ -43,13 +45,24 @@ export default {
                 {name: 'yellow', display: '#FFD200'},
                 {name: 'white', display: '#fff'},
             ],
-            dataCutouts
+            dataCutouts,
+            activeFilter: ''
         }
     },
     methods: {
         handleClick(name) {
-            alert(name);
+            this.activeFilter = name;
+            
+        }
+    },
 
+    computed: {
+        filteredCutouts() {
+            if(this.activeFilter !== '') {
+            return this.dataCutouts.filter(item => item.color.includes(this.activeFilter))
+            } else {
+                return shuffle(this.dataCutouts)
+            }
         }
     }
 }
@@ -73,16 +86,25 @@ export default {
 
 .cutouts {
     height: 100%;
-    width: 300px;
+    width: 310px;
     border: black 2px solid;
     display: flex;
     flex-wrap: wrap;
+    overflow-y: auto;
 }
 
 .cutouts__item {
     width: 140px;
     height: 150px;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
+}
+
+.cutouts__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+
 }
 
 </style>
