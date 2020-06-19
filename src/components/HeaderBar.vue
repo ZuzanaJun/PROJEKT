@@ -6,8 +6,11 @@
             <img src="/images/background/vektor_11.png" alt="logo" class="header__logo">
         </div>
         <!-- <h1 class="header__text">Kolážovník</h1> -->
-        <h1 class="header__text">Ulož do galerie</h1>
-        
+<!--         <h1 class="header__text">Ulož do galerie</h1>
+ -->        
+        <button
+            v-on:click="switchPanel"
+        > {{selectPanel ? 'Pozadí' : 'Výstřižky'}}</button>
         <div class="header__shuffle-btn"></div>
 
 
@@ -49,7 +52,18 @@
 
 <script>
 export default {
-    
+    data(){
+        return{
+             selectPanel: true,
+
+        }
+    },
+    methods: {
+        switchPanel() {
+            this.selectPanel = !this.selectPanel;
+            this.$root.$emit('switchPanel', this.selectPanel)
+        }
+    }
 }
 </script>
 

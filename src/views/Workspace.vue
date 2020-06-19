@@ -20,6 +20,7 @@ import SidebarLeft from '../components/SidebarLeft.vue';
 import SidebarRight from '../components/SidebarRight.vue';
 import CanvasArea from '../components/CanvasArea.vue';
 
+
 export default {
     components: {
         headerbar: HeaderBar,
@@ -27,12 +28,14 @@ export default {
         sidebarleft: SidebarLeft,
         sidebarright: SidebarRight,
         canvasarea: CanvasArea,
+       
     }
     
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@300;400;700&display=swap');
 
 .workspace {
     /* background-image: url('/images/background/workspace2.jpg'); */
@@ -41,7 +44,6 @@ export default {
     height: 100%;
     overflow: hidden;
     background-color: darkcyan;
-    @import url('https://fonts.googleapis.com/css2?family=Bellota:wght@300;400;700&display=swap');
 }
 
 </style>
