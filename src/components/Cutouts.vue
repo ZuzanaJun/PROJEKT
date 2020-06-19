@@ -1,7 +1,10 @@
 <template>
   <div class="panel">
     <div class="cutouts">
-      <div class="cutouts__item" v-for="cut in filteredCutouts" v-bind:key="cut.id">
+      <div 
+        class="cutouts__item" 
+        v-for="cut in filteredCutouts" 
+        v-bind:key="cut.id">
         <img v-bind:src="cut.url" class="cutouts__img" />
       </div>
     </div>

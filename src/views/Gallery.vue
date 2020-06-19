@@ -1,6 +1,15 @@
 <template>
-    <div class="gallery">
-        <img src="/images/prefinished" alt="">
+    <div class="gallery__conainer">
+        <div class="gallery">
+            <div 
+                class="gallery__item"
+                v-for="prefin in prefins"
+                v-bind:key="prefin.id"
+                >
+                <img v-bind:src="prefin.url" alt="collages" class="gallery__img">
+
+            </div>
+        </div>
     </div>
 </template>
 
@@ -9,9 +18,9 @@
 export default {
     data() {
         return {
-            prefin: [
-                {id: 5001, name: 'prefinished1.jpg', type: 'pattern', url: '/images/prefinished/prefinished1.jpg'}
-                {id: 5002, name: 'prefinished2.jpg', type: 'pattern', url: '/images/prefinished/prefinished2.jpg'}
+            prefins: [
+                {id: 5001, name: 'prefinished1.jpg', type: 'pattern', url: '/images/prefinished/prefinished1.jpg'},
+                {id: 5002, name: 'prefinished2.jpg', type: 'pattern', url: '/images/prefinished/prefinished2.jpg'},
                 {id: 5003, name: 'prefinished3.jpg', type: 'pattern', url: '/images/prefinished/prefinished3.jpg'}
             ]
         }
