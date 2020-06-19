@@ -110,7 +110,7 @@ export default {
     right: 8px;
     top: 13px; */
     margin: 6px;
-    
+   
 
 }
 
