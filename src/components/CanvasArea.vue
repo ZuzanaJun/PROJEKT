@@ -15,18 +15,22 @@ export default {
 </script>
 
 <style>
-.canvasarea{
-    /* border: 2px solid black; */
-    width: 800px;
-    height: 450px;
-    background-color: silver;
-    opacity: 0.6;
-    position: absolute;
-    top: 100px;
-    left: 150px;
+.canvas {
+  display: flex;
+  
 }
 
-/* img {
-  he
-} */
+
+.canvasarea{
+    /* border: 2px solid black; */
+    width: 60vw;
+    height: 80vh;
+    background-color: silver;
+    opacity: 0.6;
+    /* flex: 1 0 auto; */
+    margin: 30px 100px;
+    
+}
+
+
 </style>

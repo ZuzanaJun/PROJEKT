@@ -2,13 +2,13 @@
     <div class="workspace">
         <headerbar />
 
-        <sidebarleft />
+        <!-- <sidebarleft /> -->
 
         <canvasarea/>
 
         <sidebarright />
 
-        <footerbar/>
+        <!-- <footerbar/> -->
 
     </div>
 </template>
