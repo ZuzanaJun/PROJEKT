@@ -37,11 +37,11 @@ export default {
     data() {
         return {
             colors: [
-                {name: 'black', display: '#000'},
+                {name: 'black', display: '#303030'},
                 {name: 'beige', display: '#FDEEC0'},
                 {name: 'red', display: '#DA2900'},
                 {name: 'pink', display: '#FD68D0'},
-                {name: 'blue', display: '#38B7D0'},
+                {name: 'blue', display: '#389cd0'},
                 {name: 'yellow', display: '#FFD200'},
                 {name: 'white', display: '#fff'},
             ],
@@ -73,7 +73,7 @@ export default {
 .sidebarright {
     position: absolute;
     right: 0;
-    top: 48px;
+    top: 60px;
     bottom: 0;
     display: flex;
 }
@@ -87,16 +87,19 @@ export default {
 .cutouts {
     height: 100%;
     width: 310px;
-    border: black 2px solid;
+    /* border: black 2px solid; */
     display: flex;
     flex-wrap: wrap;
     overflow-y: auto;
 }
 
+.cutouts::-webkit-scrollbar {
+    display: none;
+}
+
 .cutouts__item {
     width: 140px;
     height: 150px;
-    /* background-color: blueviolet; */
 }
 
 .cutouts__img {
@@ -104,6 +107,8 @@ export default {
     height: 100%;
     object-fit: contain;
     object-position: center;
+    
+
 
 }
 

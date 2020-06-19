@@ -1,6 +1,6 @@
 <template>
   <div class="sidebarleft">
-    <v-card height="100vh" class="rounded-0">
+    <!-- <v-card height="100vh" class="rounded-0">
       <v-navigation-drawer v-model="drawer" :mini-variant.sync="mini" permanent>
         <v-list dense>
           <v-list-item
@@ -26,7 +26,7 @@
                 </v-list-item-action>
               <v-list-item-title class="my-3">{{item.title}}</v-list-item-title>
               <div class="mb-2"> <!-- pozadí pak budou vypsaná cyklem -->
-                <v-img src="/images/background/b002.jpg" alt="pozadí" max-height="100" ></v-img>
+                <!-- <v-img src="/images/background/b002.jpg" alt="pozadí" max-height="100" ></v-img>
               </div>
               <div class="mb-2">
                 <v-img src="/images/background/b001.jpg" alt="pozadí" max-height="100" ></v-img>
@@ -36,26 +36,33 @@
           </v-list-item>
         </v-list>
       </v-navigation-drawer>
-    </v-card>
+    </v-card> -->
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      drawer: true,
-      mini: true,
-      barItems: [
-        {
-          title: "Pozadí",
-          icon: "mdi-image-area"
-        }
-      ]
-    };
-  }
+//   data() {
+//     return {
+//       drawer: true,
+//       mini: true,
+//       barItems: [
+//         {
+//           title: "Pozadí",
+//           icon: "mdi-image-area"
+//         }
+//       ]
+//     };
+//   }
 };
 </script>
 
 <style>
+
+.sidebarleft {
+  border: black solid 1px;
+  height: 100vh;
+  width: 40px;
+}
+
 </style>

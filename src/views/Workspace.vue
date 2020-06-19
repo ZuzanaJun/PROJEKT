@@ -35,9 +35,13 @@ export default {
 <style>
 
 .workspace {
-    /* background-image: url('/images/background/workspace2.jpg') ;
-    background-size: cover; */
+    /* background-image: url('/images/background/workspace2.jpg'); */
+    background: url(/images/background/workspace2.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
     background-color: darkcyan;
+    @import url('https://fonts.googleapis.com/css2?family=Bellota:wght@300;400;700&display=swap');
 }
 
 </style>
