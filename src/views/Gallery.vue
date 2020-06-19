@@ -1,5 +1,16 @@
 <template>
-    <div class="gallery__conainer">
+    <div class="gallery__container">
+        <div class="header">
+        
+            <div class="header__logos">
+                <img src="/images/background/vektor_10.png" alt="logo" class="header__logo">
+                <img src="/images/background/vektor_11.png" alt="logo" class="header__logo">
+                        
+                <!-- <div class="header__shuffle-btn"></div> -->
+            </div>
+           
+        </div>
+
         <div class="gallery">
             <div 
                 class="gallery__item"
@@ -27,3 +38,23 @@ export default {
     }
 }
 </script>
+
+
+<style>
+
+.header {
+    display: flex;
+    background-color: #303030;
+    color: white;
+    font-family: 'Bellota', cursive;
+    align-items: center;
+    
+    
+}
+
+.gallery {
+    display: flex;
+}
+
+
+</style>

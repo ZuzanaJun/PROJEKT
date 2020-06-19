@@ -44,7 +44,7 @@ export default {
     right: 0;
     top: 60px;
     bottom: 0;
-    width: 335px;
+    /* width: 335px; */
 }
 
 </style>

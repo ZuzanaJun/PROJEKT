@@ -42,7 +42,7 @@ export default {
     background: url(/images/background/workspace2.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: darkcyan;
 }
 
