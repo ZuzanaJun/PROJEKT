@@ -7,6 +7,7 @@
 
         <canvasarea/>
 
+
         <sidebarright />
 
         <infoicon />
@@ -20,6 +21,7 @@
 </template>
 
 <script>
+import { v4 as uuidv4 } from 'uuid';
 import HeaderBar from '../components/HeaderBar.vue';
 import FooterBar from '../components/FooterBar.vue';
 import SidebarLeft from '../components/SidebarLeft.vue';
@@ -39,6 +41,12 @@ export default {
         editbuttons: EditButtons,
         infoicon: InfoIcon 
        
+    },
+    mounted(){
+        if(this.$route.params.id === undefined){
+            this.$router.push({ path: `/workspace/${uuidv4()}` });
+        }
+        console.log(this.$route.params.id);
     }
     
 }

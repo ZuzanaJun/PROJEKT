@@ -118,18 +118,23 @@ export default {
 .cutouts__item {
   width: 140px;
   height: 150px;
+
 }
 
 .cutouts__img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-position: center;
 }
 
 .cut-item{
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

@@ -15,7 +15,7 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/workspace',
+    path: '/workspace/:id?',
     name: 'Workspace',
     component: Workspace
   },

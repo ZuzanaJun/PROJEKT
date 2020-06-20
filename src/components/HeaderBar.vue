@@ -8,6 +8,12 @@
                 <img src="/images/background/vektor_11.png" alt="logo" class="header__logo">
                 </router-link>
             </div>
+
+ 
+               
+                <button
+                    @click="$root.$emit('saveData')"
+                >Uložit</button>
             
 
             <div class="header__btns">
