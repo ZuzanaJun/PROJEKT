@@ -9,7 +9,10 @@
 
         <sidebarright />
 
+        <infoicon />
+
         <!-- <footerbar/> -->
+        
 
     </div>
 </template>
@@ -21,6 +24,7 @@ import SidebarLeft from '../components/SidebarLeft.vue';
 import SidebarRight from '../components/SidebarRight.vue';
 import CanvasArea from '../components/CanvasArea.vue';
 import EditButtons from '../components/EditButtons.vue';
+import InfoIcon from '../components/InfoIcon.vue';
 
 
 export default {
@@ -31,6 +35,7 @@ export default {
         sidebarright: SidebarRight,
         canvasarea: CanvasArea,
         editbuttons: EditButtons,
+        infoicon: InfoIcon 
        
     }
     
@@ -53,5 +58,6 @@ export default {
 .workspace::-webkit-scrollbar {
   display: none;
 }
+
 
 </style>

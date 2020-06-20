@@ -47,8 +47,6 @@ export default {
     /* width: 335px; */
 }
 
-.sidebarright::-webkit-scrollbar {
-  display: none;
-}
+
 
 </style>
