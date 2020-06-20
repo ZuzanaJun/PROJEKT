@@ -1,6 +1,10 @@
 <template>
   <div class="background">
-    <div class="background__item" v-for="background in dataBackgrounds" v-bind:key="background.id">
+    <div class="background__item" 
+        v-for="background in dataBackgrounds" 
+        v-bind:key="background.id"
+        @click="selectBackground(background.id)"
+        >
       <img v-bind:src="background.url" alt="Pozadí" class="background__img" />
     </div>
   </div>
@@ -12,9 +16,15 @@ import dataBackgrounds from "../dataBackground.js";
 export default {
   data() {
     return {
-      dataBackgrounds
-    };
-  }
+      dataBackgrounds,
+    }
+  },
+
+   methods: {
+        selectBackground(id) {
+            this.$root.$emit('selectBackground', id)
+        }
+    }
 };
 </script>
 
