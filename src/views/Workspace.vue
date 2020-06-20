@@ -44,6 +44,11 @@ export default {
     height: 100%;
     /* overflow: hidden; */
     background-color: darkcyan;
+    
+}
+
+.workspace::-webkit-scrollbar {
+  display: none;
 }
 
 </style>

@@ -42,9 +42,13 @@ export default {
 .sidebarright {
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 67px;
     bottom: 0;
     /* width: 335px; */
+}
+
+.sidebarright::-webkit-scrollbar {
+  display: none;
 }
 
 </style>

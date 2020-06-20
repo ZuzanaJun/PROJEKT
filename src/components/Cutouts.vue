@@ -14,7 +14,7 @@
         class="colors-picker__color"
         v-for="color in colors"
         v-bind:key="color.name"
-        v-bind:style="{background: color.display, height: `${100 / colors.length}%`}"
+        v-bind:style="{height: `${100 / colors.length}%`}"
         v-on:click="handleClick(color.name)"
       ></div>
     </div>
@@ -63,15 +63,15 @@ export default {
 
 <style>
 .colors-picker {
-  height: 100vh;
+  height: calc(100vh - 67px);
   width: 35px;
-  background-color: antiquewhite;
+  
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,210,0,1) 15%, rgba(56,156,208,1) 32%, rgba(253,104,208,1) 45%, rgba(218,41,0,1) 66%, rgba(253,238,192,1) 83%, rgba(48,48,48,1) 100%);
 }
 
 .cutouts {
-  height: 100vh;
+  height: calc(100vh - 67px);
   width: 310px;
-  /* border: black 2px solid; */
   display: flex;
   flex-wrap: wrap;
   overflow-y: auto;
@@ -96,4 +96,6 @@ export default {
   object-fit: contain;
   object-position: center;
 }
+
+
 </style>

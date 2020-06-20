@@ -3,7 +3,10 @@
         
         <div class="header__logos">
             <img src="/images/background/vektor_10.png" alt="logo" class="header__logo">
+            
+            <router-link to="/gallery">
             <img src="/images/background/vektor_11.png" alt="logo" class="header__logo">
+            </router-link>
         </div>
         <!-- <h1 class="header__text">Kolážovník</h1> -->
 <!--         <h1 class="header__text">Ulož do galerie</h1>
