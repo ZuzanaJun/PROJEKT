@@ -33,10 +33,15 @@ export default {
   display: flex;
   overflow-y: auto;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 67px);
   width: 310px;
 
 }
+
+.background ::-webkit-scrollbar {
+  display: none;
+}
+
 .background__item {
   text-align: right;
 }

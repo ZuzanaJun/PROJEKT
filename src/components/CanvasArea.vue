@@ -21,6 +21,7 @@
         class="cutItem"
         v-bind:src="cut.url" alt="Výstřižek"
         @click="selected = cut.id"
+        v-bind:style="{'z-index': cut.orderIndex}"
 
          />
     </Moveable>
@@ -40,6 +41,7 @@ export default {
       selectedBackgroundUrl: dataBackgrounds[0].url,
       cutsOnCanvas: [],
       selected: '',
+      
 
       moveable: {
         draggable: true,
@@ -65,11 +67,22 @@ export default {
 
   mounted() {
     this.$root.$on("selectBackground", this.selectBackround);
-    this.$root.$on("addPiece", (cut)=>{this.cutsOnCanvas.push(cut), console.log(this.cutsOnCanvas)});
+    this.$root.$on("addPiece", (cut)=>{this.cutsOnCanvas.push({...cut, orderIndex: 0}), console.log(this.cutsOnCanvas)});
     window.addEventListener('keyup', (e) => { 
           if(e.key === 'Backspace'){
              this.cutsOnCanvas = this.cutsOnCanvas.filter(item => item.id !== this.selected);
-              } });
+              }
+          if(e.key === 'ArrowUp'){
+            const idx = this.cutsOnCanvas.findIndex(item => item.id === this.selected);
+            this.cutsOnCanvas[idx].orderIndex++;
+            console.log(idx);
+          }     
+          if(e.key === 'ArrowDown'){
+            const idx = this.cutsOnCanvas.findIndex(item => item.id === this.selected);
+            this.cutsOnCanvas[idx].orderIndex--
+          }     
+              });
+    
     
 
   },
@@ -111,6 +124,7 @@ export default {
   position: absolute;
   top: 100px;
   left: 100px;
+  /* background-color: silver; */
   background-color: silver;
   height: 600px;
   width: 900px;
