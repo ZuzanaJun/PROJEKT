@@ -1,70 +1,113 @@
 <template>
-  <div class="canvas"> 
+  <div class="canvas">
     <!-- <img src="/icons/long-arrow-alt-left-solid.svg" alt="arrow left"> 
-    <img src="/icons/long-arrow-alt-right-solid.svg" alt="arrow right">  -->
-    <div class="canvasarea">
-      <img v-bind:src="selectedBackgroundUrl" alt="Pozadí koláže">
-
+    <img src="/icons/long-arrow-alt-right-solid.svg" alt="arrow right">-->
+    <div class="canvasarea" :style="{background: `url('${selectedBackgroundUrl}')`}">
+      <!-- <img
+        class="bckg"
+       v-bind:src="selectedBackgroundUrl" alt="Pozadí koláže" /> -->
+<Moveable
+    class="moveable"
+    v-bind="moveable"
+    @drag="handleDrag"
+    @scale="handleScale"
+    @rotate="handleRotate"
+  
+  >
+      <img 
+        class="cutItem"
+        v-for="cut in cutsOnCanvas"
+        v-bind:key="cut.id"
+        v-bind:src="cut.url" alt="Výstřižek" />
+    </Moveable>
     </div>
-  </div>  
+  </div>
 </template>
 
 <script>
 import dataBackgrounds from "../dataBackground.js";
+import Moveable from "vue-moveable";
 
 export default {
   data() {
     return {
       dataBackgrounds,
-      selectedBackgroundId: '1001',
+      selectedBackgroundId: "1001",
       selectedBackgroundUrl: dataBackgrounds[0].url,
-
-    }
+      cutsOnCanvas: [],
+      moveable: {
+        draggable: true,
+        throttleDrag: 0,
+        resizable: false,
+        throttleResize: 1,
+        keepRatio: true,
+        scalable: true,
+        throttleScale: 0,
+        rotatable: true,
+        throttleRotate: 0,
+        pinchable: false, // ["draggable", "resizable", "scalable", "rotatable"]
+        origin: false
+      }
+    };
+  },
+  components: {
+    Moveable
   },
 
- mounted() {
-        this.$root.$on('selectBackground', this.selectBackround)
+  mounted() {
+    this.$root.$on("selectBackground", this.selectBackround);
+    this.$root.$on("addPiece", (cut)=>{this.cutsOnCanvas.push(cut), console.log(this.cutsOnCanvas)});
+    
+
   },
 
   methods: {
-        selectBackround(id) {
-            console.log(`Id pozadí je ${id}`);
-            const selected = this.dataBackgrounds.find(item => item.id === id);
-            this.selectedBackgroundUrl = selected.url;
-            console.log(selected);
-
-        }
+    selectBackround(id) {
+      console.log(`Id pozadí je ${id}`);
+      const selected = this.dataBackgrounds.find(item => item.id === id);
+      this.selectedBackgroundUrl = selected.url;
+      console.log(selected);
+    },
+    handleDrag({ target, transform }) {
+      console.log("onDrag left, top", transform);
+      target.style.transform = transform;
+    },
+    handleScale({ target, transform, scale }) {
+      console.log("onScale scale", scale);
+      target.style.transform = transform;
+    },
+    handleRotate({ target, dist, transform }) {
+      console.log("onRotate", dist);
+      target.style.transform = transform;
     }
-}
+  }
+};
 </script>
 
 <style>
 .canvas {
   display: flex;
-  
 }
 
-.canvas img{
+.bckg {
   height: 600px;
   width: 900px;
-
 }
 
-.canvasarea{
+.canvasarea {
   position: absolute;
   top: 100px;
   left: 100px;
   background-color: silver;
+  width: 60vw;
+     height: 80vh; 
+   /* opacity: 0.6;
+    margin: 30px 100px;  */
 
-    /* width: 60vw;
-    height: 80vh;
-    opacity: 0.6;
-    margin: 30px 100px; */
-
-    /* border: 2px solid black; */
-    /* flex: 1 0 auto; */
-    
+  /* border: 2px solid black; */
+  /* flex: 1 0 auto; */
 }
-
-
+.cutItem {
+  width: 120px;
+}
 </style>

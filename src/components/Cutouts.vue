@@ -4,7 +4,8 @@
       <div 
         class="cutouts__item" 
         v-for="cut in filteredCutouts" 
-        v-bind:key="cut.id">
+        v-bind:key="cut.id"
+        @click="addPiece(cut)">
         <img v-bind:src="cut.url" class="cutouts__img" />
       </div>
     </div>
@@ -44,6 +45,9 @@ export default {
   methods: {
     handleClick(name) {
       this.activeFilter = name;
+    },
+    addPiece(cut){
+      this.$root.$emit('addPiece', cut);
     }
   },
 
