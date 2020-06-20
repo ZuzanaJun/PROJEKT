@@ -12,7 +12,7 @@
                     <img src="/images/background/vektor_10.svg" alt="logo" class="logo" v-on:mouseover="appearance = !appearance" > 
                 </router-link>
                     <transition name="fade">
-                        <h2 class="logotext" v-if="appearance">Kolážuj</h2>
+                        <h2 class="logotext" >Kolážuj</h2>
                     </transition>
             
             </div>   
@@ -21,7 +21,7 @@
                     <img src="/images/background/vektor_11.svg" alt="logo" class="logo" v-on:mouseover="appearanceG = !appearanceG" >
                 </router-link>
                 <transition name="fade">
-                    <h2 class="logotext" v-if="appearanceG">Galerie</h2>       
+                    <h2 class="logotext" >Galerie</h2>       
                 </transition>
             </div> 
         </div>
@@ -62,14 +62,12 @@ export default {
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Bellota:wght@300;400;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;500;700&display=swap&subset=latin-ext');
+
 .homepage {
     background: url(/images/background/uvod03.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     overflow: hidden;
-  
-  
-
     color: white;
     
 }
@@ -80,8 +78,15 @@ h3 {
     margin: 20px 30px;
     font-size: 20px;
     
+    
 }
 
+.logos {
+    margin: 20px;
+    /* margin-top: 150px; */
+    text-align: center;   
+    flex-shrink: 1;
+}
 
 h2 {
     font-family: 'Bellota', cursive;
@@ -91,39 +96,49 @@ h2 {
     
 }
 
+
+
+
+@media (min-width: 740px) {
+ 
+.homepage {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 .logotext {
     text-decoration: none;
     color: white;
-    opacity: 0.8;
+    
 }
 
 .logo__all {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
     
 }
 
-.logos {
-    margin: 20px;
-    margin-top: 150px;
-    text-align: center;
-    
-    
-}
+
 
 .logo {
     max-height: 280px;
-    
+    transition: transform 0.3s ease-in-out;
     
 }
 
-.fade-enter-active, 
-.fade-leave-active {
-  transition: opacity 1.5s;
+.logo:hover {
+    transform: scale(1.1);
+    
 }
-.fade-enter, 
-.fade-leave-to {
-  opacity: 0;
+
+
+
+
+
 }
 
 </style>

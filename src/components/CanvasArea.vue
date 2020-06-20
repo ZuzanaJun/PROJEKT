@@ -54,7 +54,7 @@ export default {
   position: absolute;
   top: 100px;
   left: 100px;
-  background-color: silver;
+  /* background-color: silver; */
 
     /* width: 60vw;
     height: 80vh;
