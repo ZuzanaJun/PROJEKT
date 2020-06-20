@@ -15,7 +15,11 @@
 
             v-on:click="switchPanel"
         > {{selectPanel ? 'Pozadí' : 'Výstřižky'}}</button>
-        <div class="header__shuffle-btn"></div>
+       
+        <div 
+            class="header__shuffle-btn"
+            @click="shuffle"
+            ></div>
 
 
            
@@ -34,7 +38,10 @@ export default {
     methods: {
         switchPanel() {
             this.selectPanel = !this.selectPanel;
-            this.$root.$emit('switchPanel', this.selectPanel)
+            this.$root.$emit('switchPanel', this.selectPanel);
+        },
+        shuffle() {
+            this.$root.$emit('shuffle');
         }
     }
 }
