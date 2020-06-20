@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Workspace from '../views/Workspace.vue'
 import Gallery from '../views/Gallery.vue'
-import Moveable from '../components/Moveable.vue'
+
 
 
 Vue.use(VueRouter)

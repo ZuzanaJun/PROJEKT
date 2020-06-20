@@ -50,7 +50,7 @@ export default {
     }
 
     .gallery__img {
-    width: calc((100% - 20px) / 4);
+    
     
 }
 }
