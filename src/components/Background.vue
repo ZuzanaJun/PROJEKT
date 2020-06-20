@@ -48,6 +48,11 @@ export default {
 
 .background__img {
   width: 60%;
-  margin: 5px;
+  margin: 3px;
+  border: 2px solid transparent;
+}
+.background__img:hover {
+border: 2px solid #303030;
+box-shadow: 4px 10px 22px 6px rgba(48, 48, 48, 0.75);
 }
 </style>
