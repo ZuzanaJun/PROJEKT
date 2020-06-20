@@ -126,8 +126,7 @@ export default {
   max-height: 100%;
   width: auto;
   height: auto;
-/*   object-fit: contain;
- */  object-position: center;
+  object-position: center;
 }
 
 .cut-item{

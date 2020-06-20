@@ -36,8 +36,7 @@ export default {
       dataBackgrounds,
       selectedBackgroundId: "1001",
       selectedBackgroundUrl: dataBackgrounds[0].url,
-      cutsOnCanvas: [{"id":"29f3db6b-b4d6-4ddf-874a-44e42a50af5c","name":"cut004.png","color":["white"],"url":"/images/cutouts/cut004.png","offsetX":77.4443359375,"offsetY":48.3368034362793,"orderIndex":1073741823,"transform":"translate(604.5556640625px, -0.3368034362792969px)"},{"id":"cef07724-adfa-4e31-9ddb-db53f5215b0c","name":"cut106.png","color":["red"],"url":"/images/cutouts/cut106.png","offsetX":70.4443359375,"offsetY":90.3368034362793,"orderIndex":1073741823,"transform":"translate(527.5556640625px, -32.3368034362793px)"}],
-      cutsLocation: [],
+      cutsOnCanvas: [],
       selected: "",
     };
   },
@@ -46,6 +45,12 @@ export default {
   },
 
   mounted() {
+     if(this.$route.params.id !== undefined){
+          const storageData = window.localStorage.getItem('boards');
+          console.log(storageData);
+          const parsedData = JSON.parse(storageData);
+          this.cutsOnCanvas = parsedData;
+        };
     this.$root.$on("selectBackground", this.selectBackround);
     this.$root.$on('saveData', this.saveData)
     this.$root.$on("addPiece", cut => {
@@ -77,6 +82,7 @@ export default {
   methods: {
     saveData(){
       console.log(JSON.stringify(this.cutsOnCanvas));
+      window.localStorage.setItem('boards', JSON.stringify(this.cutsOnCanvas));
     },
     getConfig(enabled){
       if (enabled){
