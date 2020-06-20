@@ -8,20 +8,22 @@
                 <img src="/images/background/vektor_11.png" alt="logo" class="header__logo">
                 </router-link>
             </div>
-
-
-        
-            
-                
-               
-                <button>Ulož koláž</button>
             
 
+            <div class="header__btns">
+                <img src="/images/btns/save.svg" alt="" class="header__save">
+
+                           
+                <img
+                    class="switchPanel"                     
+                    v-on:click="switchPanel"
+                    v-bind:src="selectPanel ? '/images/btns/pozadi.svg' : '/images/btns/ustrizky.svg'" 
+                    alt="tlacitko pozadi">
             
-            <button                     
+            </div>
+            <!-- <button                     
                 v-on:click="switchPanel"
-            > {{selectPanel ? 'Pozadí' : 'Výstřižky'}}</button>
-            
+            > {{selectPanel ? 'Pozadí' : 'Výstřižky'}}</button> -->
        
 
             <div 
@@ -65,7 +67,7 @@ export default {
     background-color: #303030;
     color: white;
     font-family: 'Bellota', cursive;
-    justify-content: space-between;
+    
     align-items: center;
     
     
@@ -76,13 +78,13 @@ export default {
 .header_second {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    
     
 }
 
 .header__logo {
-    height: 40px;
-    margin: 10px 0 10px 10px;
+    height: 50px;
+    margin: 10px 0 5px 10px;
     
 }
 
@@ -96,10 +98,24 @@ export default {
     position: absolute;
     right: 0;
     top: 0;
+  
 
+}
+
+.header__save {
+    height: 35px;
+    position:absolute;
+    right: 240px;
+    top: 20px
     
-   
+}
 
+.switchPanel {
+    height: 35px;
+    position:absolute;
+    right: 100px;
+    top: 20px
+    
 }
 
 

@@ -6,6 +6,7 @@
     <img src="/icons/rotate-right.png" alt="">
     <img src="/icons/arrange-bring-forward.png" alt="">
     <img src="/icons/arrange-send-backward.png" alt="">
+    <img src="/icons/content-copy.png" alt="">
     <img src="/icons/delete.png" alt="">
     
     <!-- <img src="/icons/sort-up-solid.svg" alt="">
@@ -25,7 +26,7 @@ export default {
   /* background-color: burlywood; */
   width: 30px;
   position: absolute;
-  top: 260px;
+  top: 100px;
   left: 60px;
 }
 

@@ -11,6 +11,8 @@
 
         <infoicon />
 
+        
+
         <!-- <footerbar/> -->
         
 
@@ -57,6 +59,13 @@ export default {
 
 .workspace::-webkit-scrollbar {
   display: none;
+}
+
+.iconSave {
+    position: absolute;
+    bottom: 60px;
+    left: 5px;
+    width: 60px;
 }
 
 

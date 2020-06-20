@@ -13,9 +13,19 @@ export default {
 <style>
 .infoIcon {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 15px;
+    left: 15px;
     width: 40px;
 }
+
+.infoIcon:hover {
+  transform: scale(1.1);
+}
+
+.infoIcon {
+  
+  transition: transform 0.3s ease-in-out;
+}
+
 
 </style>
