@@ -23,13 +23,15 @@ export default {
   },
 
  mounted() {
-        this.$root.$on('selectBackround', this.selectBackround)
+        this.$root.$on('selectBackground', this.selectBackround)
   },
 
   methods: {
         selectBackround(id) {
+            console.log(`Id pozadí je ${id}`);
             const selected = this.dataBackgrounds.find(item => item.id === id);
-            this.selectBackroundUrl = selected.url;
+            this.selectedBackgroundUrl = selected.url;
+            console.log(selected);
 
         }
     }
