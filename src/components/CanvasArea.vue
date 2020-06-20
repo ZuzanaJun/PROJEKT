@@ -16,12 +16,13 @@
     v-for="cut in cutsOnCanvas"
     v-bind:key="cut.id"
 
+    v-bind:style="{position: 'relative', 'z-index': cut.orderIndex}"
+
   >
       <img 
         class="cutItem"
         v-bind:src="cut.url" alt="Výstřižek"
         @click="selected = cut.id"
-        v-bind:style="{'z-index': cut.orderIndex}"
 
          />
     </Moveable>
@@ -67,7 +68,7 @@ export default {
 
   mounted() {
     this.$root.$on("selectBackground", this.selectBackround);
-    this.$root.$on("addPiece", (cut)=>{this.cutsOnCanvas.push({...cut, orderIndex: 0}), console.log(this.cutsOnCanvas)});
+    this.$root.$on("addPiece", (cut)=>{this.cutsOnCanvas.push({...cut, orderIndex: 1073741823}), console.log(this.cutsOnCanvas)});
     window.addEventListener('keyup', (e) => { 
           if(e.key === 'Backspace'){
              this.cutsOnCanvas = this.cutsOnCanvas.filter(item => item.id !== this.selected);
