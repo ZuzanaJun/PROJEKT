@@ -10,16 +10,20 @@
         </div>
         <!-- <h1 class="header__text">Kolážovník</h1> -->
 <!--         <h1 class="header__text">Ulož do galerie</h1>
- -->        
-        <button
+ -->    <div class="header-btns">
+            <button>Jak začít</button>
+            <button>Ulož koláž</button>
 
-            v-on:click="switchPanel"
-        > {{selectPanel ? 'Pozadí' : 'Výstřižky'}}</button>
-       
-        <div 
-            class="header__shuffle-btn"
-            @click="shuffle"
-            ></div>
+            <button
+                v-on:click="switchPanel"
+            > {{selectPanel ? 'Pozadí' : 'Výstřižky'}}</button>
+        </div>
+            <div 
+                class="header__shuffle-btn"
+                @click="shuffle"
+                >
+            </div>
+        
 
 
            
@@ -56,6 +60,7 @@ export default {
     color: white;
     font-family: 'Bellota', cursive;
     align-items: center;
+    justify-content: space-between;
     
     
 }
@@ -67,9 +72,14 @@ export default {
 }
 
 .header__logos {
-    margin-right: auto;
+    
+    text-align: center;
 }
 
+.header-btns {
+    display: flex;
+    
+}
 
 
 
