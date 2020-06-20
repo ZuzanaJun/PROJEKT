@@ -127,11 +127,12 @@ export default {
   position: absolute;
   top: 100px;
   left: 100px;
-  /* background-color: silver; */
   background-color: silver;
   height: 600px;
   width: 900px;
   overflow: hidden;
+  box-shadow: 10px 10px 24px -5px rgba(43, 43, 43, 0.85);
+
 }
 .cutItem,
 .moveable {
