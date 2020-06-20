@@ -7,6 +7,7 @@
 
         <canvasarea/>
 
+
         <sidebarright />
 
         <infoicon />

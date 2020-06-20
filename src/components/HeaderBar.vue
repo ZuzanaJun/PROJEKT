@@ -9,12 +9,11 @@
                 </router-link>
             </div>
 
-
-        
-            
-                
+ 
                
-                <button>Ulož koláž</button>
+                <button
+                    @click="$root.$emit('saveData')"
+                >Uložit</button>
             
 
             
