@@ -112,14 +112,10 @@ export default {
   top: 100px;
   left: 100px;
   background-color: silver;
-    height: 600px;
+  height: 600px;
   width: 900px;
+  overflow: hidden;
 
-   /* opacity: 0.6;
-    margin: 30px 100px;  */
-
-  /* border: 2px solid black; */
-  /* flex: 1 0 auto; */
 }
 .cutItem, .moveable {
   width: 120px;
