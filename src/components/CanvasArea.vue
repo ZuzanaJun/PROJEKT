@@ -9,13 +9,13 @@
       v-bind:src="selectedBackgroundUrl" alt="Pozadí koláže" />-->
       <Moveable
         class="moveable"
-        v-bind="moveable"
+        v-bind="getConfig(selected === cut.id)"
         @drag="handleDrag"
         @scale="handleScale"
         @rotate="handleRotate"
         v-for="cut in cutsOnCanvas"
         v-bind:key="cut.id"
-        v-bind:style="{position: 'relative', 'z-index': cut.orderIndex}"
+        v-bind:style="{position: 'absolute', 'z-index': cut.orderIndex, transform: cut.transform}"
       >
         <img class="cutItem" v-bind:src="cut.url" alt="Výstřižek" @click="selected = cut.id" />
       </Moveable>
@@ -36,22 +36,6 @@ export default {
       selectedBackgroundUrl: dataBackgrounds[0].url,
       cutsOnCanvas: [],
       selected: "",
-
-      moveable: {
-        draggable: true,
-        throttleDrag: 0,
-        resizable: false,
-        throttleResize: 1,
-        keepRatio: true,
-        scalable: true,
-        throttleScale: 0,
-        rotatable: true,
-        throttleRotate: 0,
-        snappable: true,
-        pinchable: false, // ["draggable", "resizable", "scalable", "rotatable"]
-        origin: false,
-        bounds: { left: 100, right: 1000, top: 100, bottom: 700 }
-      }
     };
   },
   components: {
@@ -87,6 +71,27 @@ export default {
   },
 
   methods: {
+    getConfig(enabled){
+      if (enabled){
+        return {
+        draggable: true,
+        throttleDrag: 0,
+        resizable: false,
+        throttleResize: 1,
+        keepRatio: true,
+        scalable: true,
+        throttleScale: 0,
+        rotatable: true,
+        throttleRotate: 0,
+        snappable: true,
+        pinchable: false, // ["draggable", "resizable", "scalable", "rotatable"]
+        origin: false,
+        bounds: { left: 100, right: 1000, top: 100, bottom: 700 }
+        };
+      }
+        return { zoom: 0};
+      },
+      
     selectBackround(id) {
       console.log(`Id pozadí je ${id}`);
       const selected = this.dataBackgrounds.find(item => item.id === id);
@@ -105,11 +110,12 @@ export default {
       console.log("onRotate", dist);
       target.style.transform = transform;
     },
-    handleDrop(data) {
-        alert(`You dropped with data: ${JSON.stringify(data)}`);
-        this.cutsOnCanvas.push({ ...data, orderIndex: 1073741823 });
+    handleDrop(data, event) {
+        this.cutsOnCanvas.push(
+          { ...data, orderIndex: 1073741823, transform: `translate(${event.clientX - data.offsetX - 100}px, ${event.clientY - data.offsetY - 100}px)`, }
+          );
 			},
-  }
+  },
 };
 </script>
 

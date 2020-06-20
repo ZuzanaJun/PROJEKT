@@ -8,11 +8,10 @@
         @click="addPiece(cut)">
        
        <drag 
-        
         class="cut-item"
-        :transfer-data="cut"
+        :transfer-data="{...cut, offsetX, offsetY}"
        >
-          <img v-bind:src="cut.url" class="cutouts__img" />
+          <img v-bind:src="cut.url" class="cutouts__img" @mousedown="handleClickOnDrag"/>
        </drag>
 
       </div>
@@ -47,7 +46,9 @@ export default {
         { name: "white", display: "#fff" }
       ],
       dataCutouts,
-      activeFilter: ""
+      activeFilter: "",
+      offsetX: 0,
+      offsetY: 0
     };
   },
   methods: {
@@ -60,9 +61,15 @@ export default {
     shuffle() {
       this.activeFilter = "";
       this.dataCutouts = shuffle(this.dataCutouts);
+    },
+    handleClickOnDrag(e) {
+      const el = e.target.getBoundingClientRect();
+      console.log(e, el);
+      console.log(e.x - el.x);
 
+      this.offsetX = e.x - el.x;
+      this.offsetY = e.y - el.y;
     }
-
 
   },
   
