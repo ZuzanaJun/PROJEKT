@@ -2,31 +2,25 @@
   <div class="canvas">
     <!-- <img src="/icons/long-arrow-alt-left-solid.svg" alt="arrow left"> 
     <img src="/icons/long-arrow-alt-right-solid.svg" alt="arrow right">-->
+ <drop @drop="handleDrop">
     <div class="canvasarea" :style="{background: `url('${selectedBackgroundUrl}')`}">
       <!-- <img
         class="bckg"
-       v-bind:src="selectedBackgroundUrl" alt="Pozadí koláže" /> -->
-<Moveable
-    class="moveable"
-    v-bind="moveable"
-    @drag="handleDrag"
-    @scale="handleScale"
-    @rotate="handleRotate"
-  
-    v-for="cut in cutsOnCanvas"
-    v-bind:key="cut.id"
-
-    v-bind:style="{position: 'relative', 'z-index': cut.orderIndex}"
-
-  >
-      <img 
-        class="cutItem"
-        v-bind:src="cut.url" alt="Výstřižek"
-        @click="selected = cut.id"
-
-         />
-    </Moveable>
+      v-bind:src="selectedBackgroundUrl" alt="Pozadí koláže" />-->
+      <Moveable
+        class="moveable"
+        v-bind="moveable"
+        @drag="handleDrag"
+        @scale="handleScale"
+        @rotate="handleRotate"
+        v-for="cut in cutsOnCanvas"
+        v-bind:key="cut.id"
+        v-bind:style="{position: 'relative', 'z-index': cut.orderIndex}"
+      >
+        <img class="cutItem" v-bind:src="cut.url" alt="Výstřižek" @click="selected = cut.id" />
+      </Moveable>
     </div>
+  </drop>
   </div>
 </template>
 
@@ -41,8 +35,7 @@ export default {
       selectedBackgroundId: "1001",
       selectedBackgroundUrl: dataBackgrounds[0].url,
       cutsOnCanvas: [],
-      selected: '',
-      
+      selected: "",
 
       moveable: {
         draggable: true,
@@ -57,8 +50,7 @@ export default {
         snappable: true,
         pinchable: false, // ["draggable", "resizable", "scalable", "rotatable"]
         origin: false,
-        bounds: { left: 100, right: 1000, top: 100, bottom: 700},
-
+        bounds: { left: 100, right: 1000, top: 100, bottom: 700 }
       }
     };
   },
@@ -68,24 +60,30 @@ export default {
 
   mounted() {
     this.$root.$on("selectBackground", this.selectBackround);
-    this.$root.$on("addPiece", (cut)=>{this.cutsOnCanvas.push({...cut, orderIndex: 1073741823}), console.log(this.cutsOnCanvas)});
-    window.addEventListener('keyup', (e) => { 
-          if(e.key === 'Backspace'){
-             this.cutsOnCanvas = this.cutsOnCanvas.filter(item => item.id !== this.selected);
-              }
-          if(e.key === 'ArrowUp'){
-            const idx = this.cutsOnCanvas.findIndex(item => item.id === this.selected);
-            this.cutsOnCanvas[idx].orderIndex++;
-            console.log(idx);
-          }     
-          if(e.key === 'ArrowDown'){
-            const idx = this.cutsOnCanvas.findIndex(item => item.id === this.selected);
-            this.cutsOnCanvas[idx].orderIndex--
-          }     
-              });
-    
-    
-
+    this.$root.$on("addPiece", cut => {
+      
+        console.log(this.cutsOnCanvas);
+    });
+    window.addEventListener("keyup", e => {
+      if (e.key === "Backspace") {
+        this.cutsOnCanvas = this.cutsOnCanvas.filter(
+          item => item.id !== this.selected
+        );
+      }
+      if (e.key === "ArrowUp") {
+        const idx = this.cutsOnCanvas.findIndex(
+          item => item.id === this.selected
+        );
+        this.cutsOnCanvas[idx].orderIndex++;
+        console.log(idx);
+      }
+      if (e.key === "ArrowDown") {
+        const idx = this.cutsOnCanvas.findIndex(
+          item => item.id === this.selected
+        );
+        this.cutsOnCanvas[idx].orderIndex--;
+      }
+    });
   },
 
   methods: {
@@ -106,7 +104,11 @@ export default {
     handleRotate({ target, dist, transform }) {
       console.log("onRotate", dist);
       target.style.transform = transform;
-    }
+    },
+    handleDrop(data) {
+        alert(`You dropped with data: ${JSON.stringify(data)}`);
+        this.cutsOnCanvas.push({ ...data, orderIndex: 1073741823 });
+			},
   }
 };
 </script>
@@ -130,9 +132,9 @@ export default {
   height: 600px;
   width: 900px;
   overflow: hidden;
-
 }
-.cutItem, .moveable {
+.cutItem,
+.moveable {
   width: 120px;
 }
 </style>
