@@ -13,12 +13,16 @@
     @scale="handleScale"
     @rotate="handleRotate"
   
-        v-for="cut in cutsOnCanvas"
-        v-bind:key="cut.id"
+    v-for="cut in cutsOnCanvas"
+    v-bind:key="cut.id"
+
   >
       <img 
         class="cutItem"
-        v-bind:src="cut.url" alt="Výstřižek" />
+        v-bind:src="cut.url" alt="Výstřižek"
+        @click="selected = cut.id"
+
+         />
     </Moveable>
     </div>
   </div>
@@ -35,8 +39,8 @@ export default {
       selectedBackgroundId: "1001",
       selectedBackgroundUrl: dataBackgrounds[0].url,
       cutsOnCanvas: [],
-/*       moveable.bounds = { left: 100, right: 1000, top: 100, bottom: 900},
- */
+      selected: '',
+
       moveable: {
         draggable: true,
         throttleDrag: 0,
@@ -47,8 +51,11 @@ export default {
         throttleScale: 0,
         rotatable: true,
         throttleRotate: 0,
+        snappable: true,
         pinchable: false, // ["draggable", "resizable", "scalable", "rotatable"]
-        origin: false
+        origin: false,
+        bounds: { left: 100, right: 1000, top: 100, bottom: 700},
+
       }
     };
   },
@@ -59,6 +66,10 @@ export default {
   mounted() {
     this.$root.$on("selectBackground", this.selectBackround);
     this.$root.$on("addPiece", (cut)=>{this.cutsOnCanvas.push(cut), console.log(this.cutsOnCanvas)});
+    window.addEventListener('keyup', (e) => { 
+          if(e.key === 'Backspace'){
+             this.cutsOnCanvas = this.cutsOnCanvas.filter(item => item.id !== this.selected);
+              } });
     
 
   },
@@ -101,15 +112,16 @@ export default {
   top: 100px;
   left: 100px;
   background-color: silver;
-  width: 60vw;
-     height: 80vh; 
+    height: 600px;
+  width: 900px;
+
    /* opacity: 0.6;
     margin: 30px 100px;  */
 
   /* border: 2px solid black; */
   /* flex: 1 0 auto; */
 }
-.cutItem {
+.cutItem, .moveable {
   width: 120px;
 }
 </style>

@@ -24,11 +24,7 @@ Vue.use(VueRouter)
     name: 'Gallery',
     component: Gallery
   },
-  {
-    path: '/workspace/moveable',
-    name: 'Moveable',
-    component: Moveable
-  },
+
   
 ]
 
