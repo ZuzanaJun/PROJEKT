@@ -1,5 +1,5 @@
 export default [
-    {id: 1001, name: 'b001.jpg', type: 'pattern', url: '/images/background/b001.jpg'},
+    {id: 1001, name: 'b001.png', type: 'pattern', url: '/images/background/b001.png'},
     {id: 1002, name: 'b002.jpg', type: 'pattern', url: '/images/background/b002.jpg'},
     {id: 1003, name: 'b003.jpg', type: 'pattern', url: '/images/background/b003.jpg'},
     {id: 1004, name: 'b004.jpg', type: 'foto', url: '/images/background/b004.jpg'},

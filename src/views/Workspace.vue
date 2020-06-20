@@ -1,6 +1,7 @@
 <template>
     <div class="workspace">
         <headerbar />
+        <router-link to="/workspace/moveable">Moveable</router-link>
 
         <!-- <sidebarleft /> -->
 

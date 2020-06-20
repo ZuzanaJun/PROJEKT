@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Workspace from '../views/Workspace.vue'
 import Gallery from '../views/Gallery.vue'
+import Moveable from '../components/Moveable.vue'
 
 
 Vue.use(VueRouter)
@@ -22,6 +23,11 @@ Vue.use(VueRouter)
     path: '/gallery',
     name: 'Gallery',
     component: Gallery
+  },
+  {
+    path: '/workspace/moveable',
+    name: 'Moveable',
+    component: Moveable
   },
   
 ]
