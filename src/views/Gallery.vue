@@ -34,13 +34,13 @@ export default {
 
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@300;400;700&display=swap');
 .header {
     display: flex;
     background-color: #303030;
     color: white;
     font-family: 'Bellota', cursive;
-    align-items: center;
+    
     
 }
 
@@ -48,6 +48,9 @@ export default {
     background: url(/images/background/workspace2.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100%;
+    
 }
+
+
 
 </style>

@@ -32,6 +32,10 @@ export default {
 
 <style>
 
+.gallery {
+    font-family: 'Bellota', cursive;
+    color: white;
+}
 
 .gallery__img {
     width: calc((100% - 20px) / 1);
@@ -44,13 +48,20 @@ export default {
 }
 
 @media (min-width: 740px) {
-    .gallery__item {
+    .gallery {
         display: flex;
         flex-wrap: wrap;
     }
+    
+    
+    .gallery__item {
+        flex: 1 1 20%;
+        
+        
+    }
 
     .gallery__img {
-    
+        width: 330px;
     
 }
 }
