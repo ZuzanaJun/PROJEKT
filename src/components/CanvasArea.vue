@@ -13,11 +13,11 @@
     @scale="handleScale"
     @rotate="handleRotate"
   
+        v-for="cut in cutsOnCanvas"
+        v-bind:key="cut.id"
   >
       <img 
         class="cutItem"
-        v-for="cut in cutsOnCanvas"
-        v-bind:key="cut.id"
         v-bind:src="cut.url" alt="Výstřižek" />
     </Moveable>
     </div>
@@ -35,6 +35,8 @@ export default {
       selectedBackgroundId: "1001",
       selectedBackgroundUrl: dataBackgrounds[0].url,
       cutsOnCanvas: [],
+/*       moveable.bounds = { left: 100, right: 1000, top: 100, bottom: 900},
+ */
       moveable: {
         draggable: true,
         throttleDrag: 0,

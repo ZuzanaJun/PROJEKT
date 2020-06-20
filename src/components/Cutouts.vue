@@ -48,7 +48,18 @@ export default {
     },
     addPiece(cut){
       this.$root.$emit('addPiece', cut);
+    },
+    shuffle() {
+      this.activeFilter = "";
+      this.dataCutouts = shuffle(this.dataCutouts);
+
     }
+
+
+  },
+  
+  mounted() {
+        this.$root.$on('shuffle', this.shuffle)
   },
 
   computed: {
