@@ -8,8 +8,8 @@ export default [
     {id: 1007, name: 'b007.jpg', type: 'foto', url: '/images/background/b007.jpg'},
     {id: 1008, name: 'b008.jpg', type: 'foto', url: '/images/background/b008.jpg'},
     {id: 1009, name: 'b009.jpg', type: 'foto', url: '/images/background/b009.jpg'},
-    {id: 1010, name: 'b010.jpg', type: 'foto', url: '/images/background/b010.jpg'},
-    {id: 1011, name: 'b011.jpg', type: 'foto', url: '/images/background/b011.jpg'},
+    /* {id: 1010, name: 'b010.jpg', type: 'foto', url: '/images/background/b010.jpg'},
+    {id: 1011, name: 'b011.jpg', type: 'foto', url: '/images/background/b011.jpg'}, */
     
 
 ]
