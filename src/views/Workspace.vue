@@ -1,6 +1,7 @@
 <template>
     <div class="workspace">
         <headerbar />
+        <editbuttons/>
 
         <!-- <sidebarleft /> -->
 
@@ -19,6 +20,7 @@ import FooterBar from '../components/FooterBar.vue';
 import SidebarLeft from '../components/SidebarLeft.vue';
 import SidebarRight from '../components/SidebarRight.vue';
 import CanvasArea from '../components/CanvasArea.vue';
+import EditButtons from '../components/EditButtons.vue';
 
 
 export default {
@@ -28,6 +30,7 @@ export default {
         sidebarleft: SidebarLeft,
         sidebarright: SidebarRight,
         canvasarea: CanvasArea,
+        editbuttons: EditButtons,
        
     }
     
