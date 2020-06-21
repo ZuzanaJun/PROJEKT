@@ -8,7 +8,6 @@
         class="bckg"
       v-bind:src="selectedBackgroundUrl" alt="Pozadí koláže" />-->
       <Moveable
-        @renderEnd="renderEnd"
         class="moveable"
         v-bind="getConfig(selected === cut.id)"
         @drag="handleDrag"
@@ -51,6 +50,7 @@ export default {
       this.$root.$on("deleteItem", this.deleteItem );
       this.$root.$on("rotateLeft", this.rotateLeft );
       this.$root.$on("rotateRight", this.rotateRight );
+      this.$root.$on("resetCanvas", this.resetCanvas );
 
    
      if(this.$route.params.id !== undefined){
@@ -81,6 +81,10 @@ export default {
   },
 
   methods: {
+    resetCanvas(){
+      this.cutsOnCanvas = [];
+       window.localStorage.removeItem('boards');      
+    },
     rotateLeft(){
       const regex = /rotate\((.*?)deg\)/;
       
@@ -135,7 +139,8 @@ export default {
     },
 
     saveData(){
-      console.log(JSON.stringify(this.cutsOnCanvas));
+/*       prompt('Název koláže');
+ */      console.log(JSON.stringify(this.cutsOnCanvas));
       window.localStorage.setItem('boards', JSON.stringify(this.cutsOnCanvas));
     },
     getConfig(enabled){
@@ -191,9 +196,7 @@ export default {
           );
     
       },
-      renderEnd(){
-        console.log(this.cutsLocation)
-      }
+  
   },
 };
 </script>

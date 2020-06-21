@@ -56,6 +56,7 @@ export default {
     
     .gallery__item {
         flex: 1 1 20%;
+        margin: 10px;
         
         
     }
