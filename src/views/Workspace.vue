@@ -10,7 +10,9 @@
 
         <sidebarright />
 
-        <div class="reset">
+        <div 
+          @click="resetCanvas"
+          class="reset">
             <img src="/icons/reset.svg" alt="reset" class="iconReset" ><span class="tooltiptext">Reset</span>
         </div>
 
@@ -49,6 +51,16 @@ export default {
             this.$router.push({ path: `/workspace/${uuidv4()}` });
         }
         console.log(this.$route.params.id);
+    },
+    methods: {
+      resetCanvas(){
+        const promptData = confirm('Opravdu chcete vyčistit pracovní plochu?');
+       
+       if(promptData){
+          this.$root.$emit('resetCanvas')
+       }
+
+      }
     }
     
 }

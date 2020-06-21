@@ -15,8 +15,12 @@
             
 
             <div class="header__btns">
-                <img src="/images/btns/save.svg" alt="ulozit" class="header__save" @click="$root.$emit('saveData')">
-
+               
+                    <img 
+                        v-if="!saveAction"
+                        src="/images/btns/save.svg" alt="ulozit" class="header__save" @click="$root.$emit('saveData')">
+                    <div v-else
+                        class="header__save">Koláž uložena</div>
                            
                 <img
                     class="switchPanel"                     
@@ -43,6 +47,9 @@
 import InfoIcon from '../components/InfoIcon.vue';
 
 export default {
+    mounted(){
+        this.$root.$on('saveData', this.showAction)
+    },
     components: {
         infoicon: InfoIcon 
     },
@@ -50,6 +57,7 @@ export default {
     data(){
         return{
              selectPanel: true,
+             saveAction: false,
 
         }
     },
@@ -57,7 +65,16 @@ export default {
         switchPanel() {
         this.selectPanel = !this.selectPanel;
         this.$root.$emit('switchPanel', this.selectPanel);
-    }
+    },
+        showAction() {
+            this.saveAction = true;
+            console.log('showAction');
+            setTimeout( this.btnReturn, 2000);
+        },
+        btnReturn() {
+            this.saveAction = false;
+        }
+       
     }
     
 }
@@ -108,6 +125,7 @@ export default {
 .switchPanel {
   transition: transform 0.3s ease-in-out;
 }
+
 
 
 </style>
