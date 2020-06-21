@@ -10,9 +10,10 @@
 
         <sidebarright />
 
-        <infoicon />
+        <div class="reset">
+            <img src="/icons/reset.svg" alt="reset" class="iconReset" ><span class="tooltiptext">Reset</span>
+        </div>
 
-        
 
         <!-- <footerbar/> -->
         
@@ -24,22 +25,22 @@
 import { v4 as uuidv4 } from 'uuid';
 import HeaderBar from '../components/HeaderBar.vue';
 import FooterBar from '../components/FooterBar.vue';
-import SidebarLeft from '../components/SidebarLeft.vue';
+
 import SidebarRight from '../components/SidebarRight.vue';
 import CanvasArea from '../components/CanvasArea.vue';
 import EditButtons from '../components/EditButtons.vue';
-import InfoIcon from '../components/InfoIcon.vue';
+
 
 
 export default {
     components: {
         headerbar: HeaderBar,
         footerbar: FooterBar,
-        sidebarleft: SidebarLeft,
+        
         sidebarright: SidebarRight,
         canvasarea: CanvasArea,
         editbuttons: EditButtons,
-        infoicon: InfoIcon 
+        
        
     },
     mounted(){
@@ -62,19 +63,58 @@ export default {
     height: 100%;
     /* overflow: hidden; */
     background-color: darkcyan;
-    
+    font-family: 'Bellota', cursive;
 }
 
 .workspace::-webkit-scrollbar {
   display: none;
 }
 
-.iconSave {
-    position: absolute;
-    bottom: 60px;
-    left: 5px;
-    width: 60px;
+.iconReset {
+    width: 40px;
+    /* position: absolute;
+    bottom: 15px;
+    left: 15px; */
 }
 
+.reset {
+  position: absolute;
+  bottom: 15px;
+    left: 15px;
+  display: inline-block;
+  
+}
+
+.reset .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(255, 255, 255, 0.747) ;
+  color: #303030;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+
+.reset .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+.reset:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltiptext {
+    margin: 10px;
+}
 
 </style>

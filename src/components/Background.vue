@@ -38,7 +38,7 @@ export default {
 
 }
 
-.background ::-webkit-scrollbar {
+.background::-webkit-scrollbar {
   display: none;
 }
 

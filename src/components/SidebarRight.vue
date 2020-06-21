@@ -6,12 +6,16 @@
         <background  
             v-else
             /> 
+
+        <colorpicker class="colorpicker"/>
+
     </div> 
 </template>
 
 <script>
 import Background from '../components/Background.vue';
 import Cutouts from '../components/Cutouts.vue';
+import ColorPicker from '../components/ColorsPicker.vue';
 
 export default {
     data() {
@@ -23,6 +27,7 @@ export default {
     components: {
         background: Background,
         cutouts: Cutouts,
+        colorpicker: ColorPicker
     },
     mounted() {
         this.$root.$on('switchPanel', this.switchPanel)
@@ -44,9 +49,15 @@ export default {
     right: 0;
     top: 67px;
     bottom: 0;
-    /* width: 335px; */
+    width: 335px;
+    display: flex;
 }
 
 
+
+
+/* .sidebarright::-webkit-scrollbar {
+  display: none;
+} */
 
 </style>

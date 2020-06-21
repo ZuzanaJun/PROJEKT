@@ -11,13 +11,11 @@
 
  
                
-                <button
-                    @click="$root.$emit('saveData')"
-                >Uložit</button>
+               
             
 
             <div class="header__btns">
-                <img src="/images/btns/save.svg" alt="" class="header__save">
+                <img src="/images/btns/save.svg" alt="ulozit" class="header__save" @click="$root.$emit('saveData')">
 
                            
                 <img
@@ -25,6 +23,8 @@
                     v-on:click="switchPanel"
                     v-bind:src="selectPanel ? '/images/btns/pozadi.svg' : '/images/btns/ustrizky.svg'" 
                     alt="tlacitko pozadi">
+
+                <infoicon />
             
             </div>
             <!-- <button                     
@@ -32,21 +32,21 @@
             > {{selectPanel ? 'Pozadí' : 'Výstřižky'}}</button> -->
        
 
-            <div 
-                class="header__shuffle-btn"
-                @click="shuffle"
-                >
-            </div>
-        
-
-
-           
+            
+       
+          
     </div>
 </template>
 
 
 <script>
+import InfoIcon from '../components/InfoIcon.vue';
+
 export default {
+    components: {
+        infoicon: InfoIcon 
+    },
+
     data(){
         return{
              selectPanel: true,
@@ -55,13 +55,11 @@ export default {
     },
     methods: {
         switchPanel() {
-            this.selectPanel = !this.selectPanel;
-            this.$root.$emit('switchPanel', this.selectPanel);
-        },
-        shuffle() {
-            this.$root.$emit('shuffle');
-        }
+        this.selectPanel = !this.selectPanel;
+        this.$root.$emit('switchPanel', this.selectPanel);
     }
+    }
+    
 }
 </script>
 
@@ -76,17 +74,9 @@ export default {
     
     align-items: center;
     
-    
-    
-    
 }
 
-.header_second {
-    display: flex;
-    align-items: center;
-    
-    
-}
+
 
 .header__logo {
     height: 50px;
@@ -96,17 +86,10 @@ export default {
 
 
 
-.header__shuffle-btn {
-    background: linear-gradient(131deg, rgba(253,238,192,1) 0%, rgba(218,41,0,1) 21%, rgba(253,104,208,1) 45%, rgba(56,156,208,1) 70%, rgba(255,210,0,1) 100%);
-    height: 67.2px;
-    width: 35px;
-    /* border-radius: 40%; */
-    position: absolute;
-    right: 0;
-    top: 0;
-  
 
-}
+
+
+
 
 .header__save {
     height: 35px;
