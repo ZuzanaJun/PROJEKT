@@ -33,15 +33,7 @@
 </template>
 
 <script>
-import Moveable from "vue-moveable";
-
-
 export default {
-    components: {
-    Moveable
-     },
-
-   
 
     methods: {
         undoAction(){
@@ -51,20 +43,18 @@ export default {
             console.log('redo')
         },
         rotateLeft(){
-            console.log('rotateLeft')
+           this.$root.$emit('rotateLeft')
+
         },
         rotateRight(){
-            console.log('rotateRight')
+           this.$root.$emit('rotateRight')
         },
         bringForward(cutId){
-            console.log('bringForward');
             this.$root.$emit('bringForward')
         },
         bringBackward(){
-            console.log('bringBackward');
             this.$root.$emit('bringBackward')
-        },
-       
+        },      
         deleteItem(){
             console.log('deleteItem')
             this.$root.$emit('deleteItem')

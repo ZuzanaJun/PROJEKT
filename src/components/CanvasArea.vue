@@ -49,6 +49,8 @@ export default {
       this.$root.$on("bringForward", this.bringForward );
       this.$root.$on("bringBackward", this.bringBackward );
       this.$root.$on("deleteItem", this.deleteItem );
+      this.$root.$on("rotateLeft", this.rotateLeft );
+      this.$root.$on("rotateRight", this.rotateRight );
 
    
      if(this.$route.params.id !== undefined){
@@ -79,6 +81,33 @@ export default {
   },
 
   methods: {
+    rotateLeft(){
+      const regex = /rotate\((.*?)deg\)/;
+      
+      if(this.selected){
+        const idx = this.cutsOnCanvas.findIndex( item => item.id === this.selected);
+        const rotateString = this.cutsOnCanvas[idx].transform.match(regex);
+        if(rotateString){
+          const rotateData = Number(rotateString[1]);
+          this.cutsOnCanvas[idx].transform = this.cutsOnCanvas[idx].transform.replace(`rotate(${rotateString[1]}deg)`, `rotate(${rotateData-30}deg)`);     
+        } else {
+          this.cutsOnCanvas[idx].transform = this.cutsOnCanvas[idx].transform + ' rotate(-30deg)';    
+        }
+      }
+    },
+    rotateRight(){
+      const regex = /rotate\((.*?)deg\)/;
+      if(this.selected){
+        const idx = this.cutsOnCanvas.findIndex( item => item.id === this.selected); 
+        const rotateString = this.cutsOnCanvas[idx].transform.match(regex);
+        if(rotateString){
+          const rotateData = Number(rotateString[1]);
+         this.cutsOnCanvas[idx].transform = this.cutsOnCanvas[idx].transform.replace(`rotate(${rotateString[1]}deg)`, `rotate(${rotateData+30}deg)`)        
+        }  else {
+          this.cutsOnCanvas[idx].transform = this.cutsOnCanvas[idx].transform + ' rotate(30deg)';    
+        }
+      }
+    },
     bringForward(){
       if(this.selected){
 
