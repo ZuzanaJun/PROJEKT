@@ -73,23 +73,13 @@ export default {
     font-family: 'Bellota', cursive;
     
     align-items: center;
-    
 }
-
-
 
 .header__logo {
     height: 50px;
     margin: 10px 0 5px 10px;
     
 }
-
-
-
-
-
-
-
 
 .header__save {
     height: 35px;
@@ -105,6 +95,18 @@ export default {
     right: 100px;
     top: 20px
     
+}
+
+.header__logo:hover,
+.header__save:hover,
+.switchPanel:hover {
+  transform: scale(1.1);
+}
+
+.header__logo,
+.header__save,
+.switchPanel {
+  transition: transform 0.3s ease-in-out;
 }
 
 

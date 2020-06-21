@@ -78,6 +78,15 @@ export default {
     left: 15px; */
 }
 
+.infoReset:hover {
+  transform: scale(1.1);
+}
+
+.infoReset {
+  transition: transform 0.3s ease-in-out;
+}
+
+
 .reset {
   position: absolute;
   bottom: 15px;

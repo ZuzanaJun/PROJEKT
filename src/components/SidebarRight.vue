@@ -47,7 +47,7 @@ export default {
 .sidebarright {
     position: absolute;
     right: 0;
-    top: 67px;
+    top: 72px;
     bottom: 0;
     width: 335px;
     display: flex;

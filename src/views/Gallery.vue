@@ -1,6 +1,8 @@
 <template>
     <div class="gallery__container">
         <div class="header">
+
+            
         
             <div class="header__logos">
                 <router-link to="/workspace">
@@ -14,9 +16,12 @@
            
         </div>
 
-        <galleryitem />
 
+
+        <galleryitem />
         
+
+      
     </div>
 </template>
 
@@ -50,6 +55,7 @@ export default {
     height: 100%;
     
 }
+
 
 
 
