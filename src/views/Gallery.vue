@@ -14,7 +14,11 @@
            
         </div>
 
-        <galleryitem />
+        <galleryitem 
+            v-for="board in savedBoards"
+            v-bind:key="board.data.id"
+            v-bind:board="board"
+        > </galleryitem>
 
         
     </div>
@@ -25,10 +29,16 @@
 import GalleryItem from '../components/GalleryItem'
 
 export default {
+    data() {
+        return{
+            savedBoards: '',
+        }
+    },
     mounted() {
 
         const dataObj = window.localStorage.getItem('boards');          
         const parsedData = JSON.parse(dataObj);
+        this.savedBoards = parsedData;
 
         console.log(parsedData);
     
