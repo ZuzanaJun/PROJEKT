@@ -90,11 +90,11 @@ export default {
     left: 15px; */
 }
 
-.infoReset:hover {
+.reset:hover {
   transform: scale(1.1);
 }
 
-.infoReset {
+.reset {
   transition: transform 0.3s ease-in-out;
 }
 
@@ -129,7 +129,7 @@ export default {
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent white transparent transparent;
+  border-color: transparent rgba(255, 255, 255, 0.747) transparent transparent;
 }
 .reset:hover .tooltiptext {
   visibility: visible;
