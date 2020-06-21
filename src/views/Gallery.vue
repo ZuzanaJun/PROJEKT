@@ -22,8 +22,7 @@
             v-bind:board="board"
         > </galleryitem>
 
-
-        <galleryitem />
+ 
         
 
       
