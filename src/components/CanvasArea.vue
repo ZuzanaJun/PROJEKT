@@ -16,7 +16,7 @@
         @rotate="handleRotate"
         v-for="cut in cutsOnCanvas"
         v-bind:key="cut.id"
-        v-bind:style="{position: 'absolute', 'z-index': cut.orderIndex, transform: cut.transform}"
+        v-bind:style="{position: 'absolute', 'z-index': cut.orderIndex, transform: cut.transform}"       
       >
         <img class="cutItem" v-bind:src="cut.url" alt="Výstřižek" @mousedown="selected = cut.id" />
       </Moveable>
@@ -45,41 +45,95 @@ export default {
   },
 
   mounted() {
+  
+      this.$root.$on("bringForward", this.bringForward );
+      this.$root.$on("bringBackward", this.bringBackward );
+      this.$root.$on("deleteItem", this.deleteItem );
+      this.$root.$on("rotateLeft", this.rotateLeft );
+      this.$root.$on("rotateRight", this.rotateRight );
+
+   
      if(this.$route.params.id !== undefined){
           const storageData = window.localStorage.getItem('boards');
           console.log(storageData);
           const parsedData = JSON.parse(storageData);
-          this.cutsOnCanvas = parsedData;
+          if(parsedData){
+            this.cutsOnCanvas = parsedData;
+          }
         };
     this.$root.$on("selectBackground", this.selectBackround);
-    this.$root.$on('saveData', this.saveData)
+    this.$root.$on('saveData', this.saveData);
     this.$root.$on("addPiece", cut => {
       
         console.log(this.cutsOnCanvas);
     });
     window.addEventListener("keyup", e => {
-      if (e.key === "Backspace") {
-        this.cutsOnCanvas = this.cutsOnCanvas.filter(
-          item => item.id !== this.selected
-        );
+      if (e.key === "Delete" || e.key === "Backspace") {
+        this.deleteItem();
       }
       if (e.key === "ArrowUp") {
-        const idx = this.cutsOnCanvas.findIndex(
-          item => item.id === this.selected
-        );
-        this.cutsOnCanvas[idx].orderIndex++;
-        console.log(idx);
+        this.bringForward();
       }
       if (e.key === "ArrowDown") {
-        const idx = this.cutsOnCanvas.findIndex(
-          item => item.id === this.selected
-        );
-        this.cutsOnCanvas[idx].orderIndex--;
+        this.bringBackward();        
       }
     });
   },
 
   methods: {
+    rotateLeft(){
+      const regex = /rotate\((.*?)deg\)/;
+      
+      if(this.selected){
+        const idx = this.cutsOnCanvas.findIndex( item => item.id === this.selected);
+        const rotateString = this.cutsOnCanvas[idx].transform.match(regex);
+        if(rotateString){
+          const rotateData = Number(rotateString[1]);
+          this.cutsOnCanvas[idx].transform = this.cutsOnCanvas[idx].transform.replace(`rotate(${rotateString[1]}deg)`, `rotate(${rotateData-30}deg)`);     
+        } else {
+          this.cutsOnCanvas[idx].transform = this.cutsOnCanvas[idx].transform + ' rotate(-30deg)';    
+        }
+      }
+    },
+    rotateRight(){
+      const regex = /rotate\((.*?)deg\)/;
+      if(this.selected){
+        const idx = this.cutsOnCanvas.findIndex( item => item.id === this.selected); 
+        const rotateString = this.cutsOnCanvas[idx].transform.match(regex);
+        if(rotateString){
+          const rotateData = Number(rotateString[1]);
+         this.cutsOnCanvas[idx].transform = this.cutsOnCanvas[idx].transform.replace(`rotate(${rotateString[1]}deg)`, `rotate(${rotateData+30}deg)`)        
+        }  else {
+          this.cutsOnCanvas[idx].transform = this.cutsOnCanvas[idx].transform + ' rotate(30deg)';    
+        }
+      }
+    },
+    bringForward(){
+      if(this.selected){
+
+        const idx = this.cutsOnCanvas.findIndex(
+          item => item.id === this.selected
+        );
+        this.cutsOnCanvas[idx].orderIndex++;
+      }
+    },
+    bringBackward(){
+      if(this.selected){
+
+        const idx = this.cutsOnCanvas.findIndex(
+          item => item.id === this.selected
+        );
+        this.cutsOnCanvas[idx].orderIndex--;
+      }
+    },
+    deleteItem(){
+       if(this.selected){
+         this.cutsOnCanvas = this.cutsOnCanvas.filter(
+          item => item.id !== this.selected
+        );
+       }
+    },
+
     saveData(){
       console.log(JSON.stringify(this.cutsOnCanvas));
       window.localStorage.setItem('boards', JSON.stringify(this.cutsOnCanvas));
@@ -132,7 +186,7 @@ export default {
     },
     handleDrop(data, event) {
         this.cutsOnCanvas.push(
-          { ...data, orderIndex: 1073741823, id: uuidv4(),
+          { ...data, orderIndex: 1073741823/* +this.cutsOnCanvas.length */, id: uuidv4(),
            transform: `translate(${event.clientX - data.offsetX - 100}px, ${event.clientY - data.offsetY - 100}px)`, }
           );
     

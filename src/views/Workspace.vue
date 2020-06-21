@@ -33,6 +33,7 @@ import EditButtons from '../components/EditButtons.vue';
 
 
 export default {
+
     components: {
         headerbar: HeaderBar,
         footerbar: FooterBar,
