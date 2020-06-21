@@ -6,7 +6,13 @@
         v-for="cut in filteredCutouts" 
         v-bind:key="cut.id"
         @click="addPiece(cut)">
-        <img v-bind:src="cut.url" class="cutouts__img" />
+         <drag 
+        class="cut-item"
+        :transfer-data="{...cut, offsetX, offsetY}"
+       >
+          <img v-bind:src="cut.url" class="cutouts__img" @mousedown="handleClickOnDrag"/>
+       </drag>
+
       </div>
     </div>
 
@@ -24,7 +30,9 @@ export default {
     return {
       
       dataCutouts,
-      activeFilter: ""
+      activeFilter: "",
+      offsetX: 0,
+      offsetY: 0
     };
   },
 
@@ -47,6 +55,13 @@ export default {
     shuffle() {
       this.activeFilter = '';
       this.dataCutouts = shuffle(this.dataCutouts);
+    },
+    handleClickOnDrag(e) {
+      const el = e.target.getBoundingClientRect();
+      console.log(e, el);
+      console.log(e.x - el.x);
+      this.offsetX = e.x - el.x;
+      this.offsetY = e.y - el.y;
     }
   },
   
@@ -85,11 +100,18 @@ export default {
 }
 
 .cutouts__img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 
+.cut-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 </style>
