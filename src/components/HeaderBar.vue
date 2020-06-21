@@ -15,8 +15,11 @@
             
 
             <div class="header__btns">
-                <img src="/images/btns/save.svg" alt="ulozit" class="header__save" @click="$root.$emit('saveData')">
-
+               
+                    <img 
+                        v-if="!saveAction"
+                        src="/images/btns/save.svg" alt="ulozit" class="header__save" @click="$root.$emit('saveData')">
+                    <div v-else class="header__save">Koláž uložena</div>
                            
                 <img
                     class="switchPanel"                     
@@ -50,6 +53,7 @@ export default {
     data(){
         return{
              selectPanel: true,
+             saveAction: true,
 
         }
     },
@@ -106,6 +110,7 @@ export default {
     top: 20px
     
 }
+
 
 
 </style>

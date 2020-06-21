@@ -55,10 +55,10 @@ export default {
    
      if(this.$route.params.id !== undefined){
           const storageData = window.localStorage.getItem('boards');
-          console.log(storageData);
+
           const parsedData = JSON.parse(storageData);
-          if(parsedData){
-            this.cutsOnCanvas = parsedData;
+          if(parsedData && parsedData[this.$route.params.id]){
+            this.cutsOnCanvas = parsedData[this.$route.params.id];
           }
         };
     this.$root.$on("selectBackground", this.selectBackround);
@@ -140,8 +140,16 @@ export default {
 
     saveData(){
 /*       prompt('Název koláže');
- */      console.log(JSON.stringify(this.cutsOnCanvas));
-      window.localStorage.setItem('boards', JSON.stringify(this.cutsOnCanvas));
+  */   //   console.log(JSON.stringify(this.cutsOnCanvas));
+      const dataObj = window.localStorage.getItem('boards');
+          
+      const parsedData = JSON.parse(dataObj);
+   
+      
+      parsedData[this.$route.params.id] = this.cutsOnCanvas;
+      console.log(dataObj)
+      window.localStorage.setItem('boards', JSON.stringify(parsedData));
+      
     },
     getConfig(enabled){
       if (enabled){

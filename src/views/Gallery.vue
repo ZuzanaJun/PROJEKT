@@ -25,7 +25,15 @@
 import GalleryItem from '../components/GalleryItem'
 
 export default {
+    mounted() {
+
+        const dataObj = window.localStorage.getItem('boards');          
+        const parsedData = JSON.parse(dataObj);
+
+        console.log(parsedData);
     
+        
+},
     components: {
         galleryitem: GalleryItem
     }
