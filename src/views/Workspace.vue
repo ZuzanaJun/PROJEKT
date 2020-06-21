@@ -32,6 +32,7 @@ import InfoIcon from '../components/InfoIcon.vue';
 
 
 export default {
+
     components: {
         headerbar: HeaderBar,
         footerbar: FooterBar,

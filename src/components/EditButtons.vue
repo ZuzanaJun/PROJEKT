@@ -20,9 +20,9 @@
     <img 
         v-on:click="bringBackward"
         src="/icons/arrange-send-backward.png" alt="Do pozadí">
-    <img 
+    <!-- <img 
          v-on:click="copyItem"
-         src="/icons/content-copy.png" alt="Duplikování">
+         src="/icons/content-copy.png" alt="Duplikování"> -->
     <img 
          v-on:click="deleteItem"
          src="/icons/delete.png" alt="Smazání">
@@ -33,8 +33,16 @@
 </template>
 
 <script>
+import Moveable from "vue-moveable";
+
 
 export default {
+    components: {
+    Moveable
+     },
+
+   
+
     methods: {
         undoAction(){
             console.log('undo')
@@ -48,17 +56,18 @@ export default {
         rotateRight(){
             console.log('rotateRight')
         },
-        bringForward(){
-            console.log('bringForward')
+        bringForward(cutId){
+            console.log('bringForward');
+            this.$root.$emit('bringForward')
         },
         bringBackward(){
-            console.log('bringBackward')
+            console.log('bringBackward');
+            this.$root.$emit('bringBackward')
         },
-        copyItem(){
-            console.log('copyItem')
-        },
+       
         deleteItem(){
             console.log('deleteItem')
+            this.$root.$emit('deleteItem')
         }
     }
 }
