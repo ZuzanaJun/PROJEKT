@@ -79,7 +79,7 @@ export default {
 
 
 .cutouts {
-  height: calc(100vh - 67px);
+  height: calc(100vh - 72px);
   width: 300px;
   display: flex;
   flex-wrap: wrap;

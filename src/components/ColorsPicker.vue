@@ -55,7 +55,7 @@ export default {
 
 <style>
     .colors-picker {
-        height: calc(100vh - 67px);
+        height: calc(100vh - 72px);
         width: 35px;
         
         background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,210,0,1) 15%, rgba(56,156,208,1) 32%, rgba(253,104,208,1) 45%, rgba(218,41,0,1) 66%, rgba(253,238,192,1) 83%, rgba(48,48,48,1) 100%);
