@@ -1,13 +1,31 @@
 <template>
   <div class="edit-buttons">
-    <img src="/icons/undo.png" alt="">
-    <img src="/icons/redo.png" alt="">
-    <img src="/icons/rotate-left.png" alt="">
-    <img src="/icons/rotate-right.png" alt="">
-    <img src="/icons/arrange-bring-forward.png" alt="">
-    <img src="/icons/arrange-send-backward.png" alt="">
-    <img src="/icons/content-copy.png" alt="">
-    <img src="/icons/delete.png" alt="">
+    <img 
+        v-on:click="undoAction"
+        src="/icons/undo.png"
+        alt="Zpět">
+    <img 
+        v-on:click="redoAction"
+        src="/icons/redo.png" 
+        alt="Vpřed">
+    <img 
+        v-on:click="rotateLeft"
+        src="/icons/rotate-left.png" alt="Otočení doleva">
+    <img 
+         v-on:click="rotateRight"
+        src="/icons/rotate-right.png" alt="Otočení doprava">
+    <img 
+         v-on:click="bringForward"
+        src="/icons/arrange-bring-forward.png" alt="Do popředí">
+    <img 
+        v-on:click="bringBackward"
+        src="/icons/arrange-send-backward.png" alt="Do pozadí">
+    <img 
+         v-on:click="copyItem"
+         src="/icons/content-copy.png" alt="Duplikování">
+    <img 
+         v-on:click="deleteItem"
+         src="/icons/delete.png" alt="Smazání">
     
     <!-- <img src="/icons/sort-up-solid.svg" alt="">
     <img src="/icons/sort-down-solid.svg" alt=""> -->
@@ -15,8 +33,34 @@
 </template>
 
 <script>
-export default {
 
+export default {
+    methods: {
+        undoAction(){
+            console.log('undo')
+        },
+        redoAction(){
+            console.log('redo')
+        },
+        rotateLeft(){
+            console.log('rotateLeft')
+        },
+        rotateRight(){
+            console.log('rotateRight')
+        },
+        bringForward(){
+            console.log('bringForward')
+        },
+        bringBackward(){
+            console.log('bringBackward')
+        },
+        copyItem(){
+            console.log('copyItem')
+        },
+        deleteItem(){
+            console.log('deleteItem')
+        }
+    }
 }
 </script>
 
