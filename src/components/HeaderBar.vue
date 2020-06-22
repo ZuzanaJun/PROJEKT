@@ -115,7 +115,7 @@ export default {
 .header__save {
     height: 40px;
     position:absolute;
-    right: 250px;
+    right: 330px;
     top: 15px
     
 }
@@ -123,7 +123,7 @@ export default {
 .switchPanel {
     height: 43px;
     position:absolute;
-    right: 80px;
+    right: 110px;
     top: 15px
     
 }
