@@ -85,9 +85,8 @@ export default {
 
 
 .infoIcon {
-    /* position: absolute;
-    top: 15px;
-    right: 10px; */
+    
+    margin: 0 5px;
     width: 40px;
 
 
