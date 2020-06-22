@@ -71,7 +71,7 @@ export default {
     background-size: cover;
     height: 100%;
     /* overflow: hidden; */
-    background-color: darkcyan;
+    background-color: #303030;
     font-family: 'Bellota', cursive;
 }
 
@@ -113,7 +113,7 @@ export default {
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  top: -5px;
+  top: -20px;
   left: 110%;
 }
 
