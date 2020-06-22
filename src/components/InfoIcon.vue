@@ -109,6 +109,7 @@ export default {
   bottom: 70px;
   left: 17px;
   display: inline-block;
+  z-index: 2147483647;
   
 }
 
