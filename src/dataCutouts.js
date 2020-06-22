@@ -157,7 +157,7 @@ export default [
     {id: 2156, name: 'cut156.png', color: ['green', 'blue'], url: '/images/cutouts/cut156.png'},
     {id: 2157, name: 'cut157.png', color: ['green', 'blue'], url: '/images/cutouts/cut157.png'},
     {id: 2158, name: 'cut158.png', color: ['green', 'blue'], url: '/images/cutouts/cut158.png'},
-    {id: 2159, name: 'cut159.png', color: ['green', 'white'], url: '/images/cutouts/cut159.png'},
+    {id: 2159, name: 'cut159.png', color: ['green', 'blue'], url: '/images/cutouts/cut159.png'},
     {id: 2160, name: 'cut160.png', color: ['green', 'blue'], url: '/images/cutouts/cut160.png'},
     {id: 2161, name: 'cut161.png', color: ['green', 'black'], url: '/images/cutouts/cut161.png'},
     {id: 2162, name: 'cut162.png', color: ['green', 'blue'], url: '/images/cutouts/cut162.png'},
