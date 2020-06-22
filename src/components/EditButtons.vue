@@ -59,6 +59,7 @@ export default {
 .edit-buttons img {
   width: 100%;
   transition: transform 0.3s ease-in-out;
+  margin: 5px;
 }
 
 </style>

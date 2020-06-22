@@ -13,6 +13,7 @@
 <script>
 import dataBackgrounds from "../dataBackground.js";
 
+
 export default {
   data() {
     return {
@@ -20,11 +21,14 @@ export default {
     }
   },
 
-   methods: {
-        selectBackground(id) {
-            this.$root.$emit('selectBackground', id)
-        }
-    }
+  methods: {
+      selectBackground(id) {
+          this.$root.$emit('selectBackground', id)
+      },
+     
+  },
+
+
 };
 </script>
 

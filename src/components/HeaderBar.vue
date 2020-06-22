@@ -48,7 +48,9 @@ import InfoIcon from '../components/InfoIcon.vue';
 
 export default {
     mounted(){
-        this.$root.$on('saveData', this.showAction)
+        this.$root.$on('saveData', this.showAction);
+        this.$root.$on('pickerClicked', this.pickerClicked);
+        
     },
     components: {
         infoicon: InfoIcon 
@@ -68,11 +70,13 @@ export default {
     },
         showAction() {
             this.saveAction = true;
-            console.log('showAction');
             setTimeout( this.btnReturn, 2000);
         },
         btnReturn() {
             this.saveAction = false;
+        },
+        pickerClicked(value){
+            this.selectPanel = value;
         }
        
     }

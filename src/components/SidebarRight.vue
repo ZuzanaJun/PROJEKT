@@ -35,7 +35,7 @@ export default {
     methods: {
         switchPanel(panel) {
             this.selectPanel = panel;
-
+            this.$root.$emit('pickerClicked', panel)
         }
     }
 }

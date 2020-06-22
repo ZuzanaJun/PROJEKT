@@ -27,8 +27,7 @@ import shuffle from "lodash.shuffle";
 
 export default {
   data() {
-    return {
-      
+    return {      
       dataCutouts,
       activeFilter: "",
       offsetX: 0,
@@ -58,8 +57,8 @@ export default {
     },
     handleClickOnDrag(e) {
       const el = e.target.getBoundingClientRect();
-      console.log(e, el);
-      console.log(e.x - el.x);
+     /*  console.log(e, el);
+      console.log(e.x - el.x); */
       this.offsetX = e.x - el.x;
       this.offsetY = e.y - el.y;
     }
@@ -67,8 +66,8 @@ export default {
   
   
   mounted() {
-        this.$root.$on('shuffle', this.shuffle)
-        this.$root.$on('colorFilter', this.changeFilter)
+    this.$root.$on('shuffle', this.shuffle)
+    this.$root.$on('colorFilter', this.changeFilter)
   },
 
   

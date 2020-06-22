@@ -1,22 +1,22 @@
 <template>
   
-      <div class="colors-picker">
-      <div
-        class="colors-picker__color"
-        v-for="color in colors"
-        v-bind:key="color.name"
-        v-bind:style="{height: `${100 / colors.length}%`}"
-        v-on:click="handleClick(color.name)"
-      ></div>
+  <div class="colors-picker">
+   
+    <div
+      class="colors-picker__color"
+      v-for="color in colors"
+      v-bind:key="color.name"
+      v-bind:style="{height: `${100 / colors.length}%`}"
+      v-on:click="handleClick(color.name)"
+    ></div>
 
-        <div 
-            class="header__shuffle-btn"
-            @click="shuffle"
-            >
-        </div>  
+    <div 
+      class="header__shuffle-btn"
+      @click="shuffle"
+    ></div>  
 
-    </div>
-    
+  </div>
+
 </template>
 
 <script>
@@ -32,20 +32,20 @@ export default {
         { name: "yellow", display: "#FFD200" },
         { name: "white", display: "#fff" }
       ],
+        panel: true,
 
      }
  },
  methods: {
      
     handleClick(name) {
+      this.$root.$emit('switchPanel', this.panel);
       this.$root.$emit('colorFilter', name);
     },
     addPiece(cut){
       this.$root.$emit('addPiece', cut);
-    },
- 
-    
-     shuffle() {
+    },    
+    shuffle() {
         this.$root.$emit('shuffle');
     }
    }
