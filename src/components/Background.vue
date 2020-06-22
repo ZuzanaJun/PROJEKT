@@ -33,7 +33,7 @@ export default {
   display: flex;
   overflow-y: auto;
   flex-direction: column;
-  height: calc(100vh - 67px);
+  height: calc(100vh - 72px);
   width: 310px;
 
 }
