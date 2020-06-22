@@ -1,27 +1,34 @@
 <template>
   <div class="canvas">
-    <!-- <img src="/icons/long-arrow-alt-left-solid.svg" alt="arrow left">
-    <img src="/icons/long-arrow-alt-right-solid.svg" alt="arrow right">-->
- <drop @drop="handleDrop">
-    <div ref="canvasarea" class="canvasarea" :style="{background: `url('${selectedBackgroundUrl}')`}">
-      <!-- <img
-        class="bckg"
-      v-bind:src="selectedBackgroundUrl" alt="Pozadí koláže" />-->
-      <Moveable
-        ref="moveable"
-        class="moveable"
-        v-bind="getConfig(selected === cut.id)"
-        @drag="handleDrag"
-        @scale="handleScale"
-        @rotate="handleRotate"
-        v-for="cut in cutsOnCanvas"
-        v-bind:key="cut.id"
-        v-bind:style="{position: 'absolute', 'z-index': cut.orderIndex, transform: cut.transform}"
-      >
-        <img class="cutItem" v-on:load="reloadRects" v-bind:src="cut.url" alt="Výstřižek" @mousedown="selected = cut.id" />
-      </Moveable>
-    </div>
-  </drop>
+  
+    <drop @drop="handleDrop">
+      <div ref="canvasarea" class="canvasarea" :style="{background: `url('${selectedBackgroundUrl}')`}">
+        <div class="no-select" @click="selectNone">
+
+          <Moveable
+            ref="moveable"
+            class="moveable"
+            v-bind="getConfig(selected === cut.id)"
+            @drag="handleDrag"
+            @scale="handleScale"
+            @rotate="handleRotate"
+            v-for="cut in cutsOnCanvas"
+            v-bind:key="cut.id"
+            v-bind:style="{position: 'absolute', 'z-index': cut.orderIndex, transform: cut.transform}"
+          >
+            <img 
+              class="cutItem" 
+              v-bind:src="cut.url" 
+              alt="Výstřižek" 
+              v-on:load="reloadRects" 
+              @mousedown="selected = cut.id" 
+            />
+
+          </Moveable>
+        </div>
+
+      </div>
+    </drop>
   </div>
 </template>
 
@@ -147,6 +154,10 @@ export default {
         );
        }
     },
+    selectNone(){
+      this.selected = "";
+    },
+
 
     async saveData(){
 /*       prompt('Název koláže');
@@ -199,7 +210,7 @@ export default {
       },
 
     selectBackround(id) {
-      console.log(`Id pozadí je ${id}`);
+/*       console.log(`Id pozadí je ${id}`);*/      
       const selected = this.dataBackgrounds.find(item => item.id === id);
       this.selectedBackgroundUrl = selected.url;
       console.log(selected);
@@ -236,6 +247,13 @@ export default {
 </script>
 
 <style>
+.no-select{
+  border: 1px solid red;
+  position: absolute;
+  z-index: 0;
+  height: 600px;
+  width: 900px;
+}
 .canvas {
   display: flex;
 }
