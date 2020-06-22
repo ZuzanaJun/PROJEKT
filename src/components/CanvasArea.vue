@@ -3,29 +3,29 @@
   
     <drop @drop="handleDrop">
       <div ref="canvasarea" class="canvasarea" :style="{background: `url('${selectedBackgroundUrl}')`}">
-        <div class="no-select" @click="selectNone">
+        <div class="no-select" @click="selectNone"></div>
 
-          <Moveable
-            ref="moveable"
-            class="moveable"
-            v-bind="getConfig(selected === cut.id)"
-            @drag="handleDrag"
-            @scale="handleScale"
-            @rotate="handleRotate"
-            v-for="cut in cutsOnCanvas"
-            v-bind:key="cut.id"
-            v-bind:style="{position: 'absolute', 'z-index': cut.orderIndex, transform: cut.transform}"
-          >
-            <img 
-              class="cutItem" 
-              v-bind:src="cut.url" 
-              alt="Výstřižek" 
-              v-on:load="reloadRects" 
-              @mousedown="selected = cut.id" 
-            />
+        <Moveable
+          ref="moveable"
+          class="moveable"
+          v-bind="getConfig(selected === cut.id)"
+          @drag="handleDrag"
+          @scale="handleScale"
+          @rotate="handleRotate"
+          v-for="cut in cutsOnCanvas"
+          v-bind:key="cut.id"
+          v-bind:style="{position: 'absolute', 'z-index': cut.orderIndex, transform: cut.transform}"
+        >
+          <img 
+            class="cutItem" 
+            v-bind:src="cut.url" 
+            alt="Výstřižek" 
+            v-on:load="reloadRects" 
+            @mousedown="selected = cut.id" 
+          />
 
-          </Moveable>
-        </div>
+        </Moveable>
+        
 
       </div>
     </drop>
@@ -247,13 +247,6 @@ export default {
 </script>
 
 <style>
-.no-select{
-  border: 1px solid red;
-  position: absolute;
-  z-index: 0;
-  height: 600px;
-  width: 900px;
-}
 .canvas {
   display: flex;
 }
@@ -277,5 +270,11 @@ export default {
 .cutItem,
 .moveable {
   width: 120px;
+}
+.no-select{
+  position: absolute;
+  z-index: 0;
+  height: 600px;
+  width: 900px;
 }
 </style>
