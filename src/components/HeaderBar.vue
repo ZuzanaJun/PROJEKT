@@ -1,13 +1,17 @@
 <template>
     <div class="header">
         
-            <div class="header__logos">
-                <img src="/images/background/vektor_10.png" alt="logo" class="header__logo">
+                   
+            <div class="header__logos1">
+                <img src="/images/background/vektor_10.png" alt="logo" class="header__logo_flower">
+            </div>
                 
+            <div class="header__logos2">
                 <router-link to="/gallery">
-                <img src="/images/background/vektor_11.png" alt="logo" class="header__logo">
+                <img src="/images/background/vektor_11.png" alt="logo" class="header__logo_cross"><span class="tooltiptext">Galerie</span>
                 </router-link>
             </div>
+ 
 
  
                
@@ -87,19 +91,25 @@ export default {
 
 <style>
 
-.header {
+/* .header {
     display: flex;
     background-color: #303030;
     color: white;
     font-family: 'Bellota', cursive;
     
     align-items: center;
+} */
+
+.header__logo_cross,
+.header__logo_flower {
+    height: 50px;
+    margin: 10px 0 5px 20px;
+    
 }
 
-.header__logo {
-    height: 50px;
-    margin: 10px 0 5px 10px;
-    
+.header__logos2 {
+    position: absolute;
+    left: 70px;
 }
 
 .header__save {
@@ -118,19 +128,52 @@ export default {
     
 }
 
-.header__logo:hover,
+.header__logo_cross:hover,
 .header__save:hover,
 .switchPanel:hover {
   transform: scale(1.1);
 }
 
-.header__logo,
+.header__logo_cross,
 .header__save,
 .switchPanel {
   transition: transform 0.3s ease-in-out;
 }
 
 
+.header__logos2 .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(255, 255, 255, 0.747) ;
+  color: #303030;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 110%;
+}
+
+.header__logos2 .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(255, 255, 255, 0.747) transparent transparent;
+}
+
+.header__logos2:hover .tooltiptext {
+  visibility: visible;
+  
+}
+
+.tooltiptext {
+    margin: 10px;
+}
 
 
 </style>
