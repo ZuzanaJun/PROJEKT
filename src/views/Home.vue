@@ -25,19 +25,7 @@
                 </transition>
             </div> 
         </div>
-        
 
-     
-
-
-        <!-- <v-app>
-            
-            <div class="text-center">
-                <v-btn class="ma-2" outlined color="indigo"><router-link to="/workspace">Začít</router-link></v-btn>     
-                <v-btn class="ma-2" outlined color="indigo"><router-link to="/gallery">Přejít do galerie</router-link></v-btn>     
-            </div>
-        
-        </v-app> -->
     </div>
 </template>
 
@@ -74,32 +62,59 @@ export default {
 
 h3 {
     font-family: 'Bellota', cursive;
-    /* font-family: 'MuseoModerno', cursive; */
-    margin: 20px 30px;
-    font-size: 20px;
+    margin: 30px;
+    font-size: 30px;
     
     
 }
 
 .logos {
-    margin: 20px;
+    margin: 50px;
     /* margin-top: 150px; */
     text-align: center;   
     flex-shrink: 1;
 }
 
+
+
 h2 {
     font-family: 'Bellota', cursive;
     margin: 30px 50px;
-    font-size: 40px;
+    font-size: 20px;
     
     
 }
 
+.logotext {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    
+}
 
+.logo {
+    max-height: 220px;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    
+}
 
 
 @media (min-width: 740px) {
+
+h2 {
+    font-size: 30px;
+}
+
+.logo {
+    max-height: 260px;
+    
+}
+
  
 .homepage {
     display: flex;
@@ -108,11 +123,7 @@ h2 {
 
 
 
-.logotext {
-    text-decoration: none;
-    color: white;
-    
-}
+
 
 .logo__all {
     display: flex;
@@ -124,16 +135,7 @@ h2 {
 
 
 
-.logo {
-    max-height: 280px;
-    transition: transform 0.3s ease-in-out;
-    
-}
 
-.logo:hover {
-    transform: scale(1.1);
-    
-}
 
 
 
