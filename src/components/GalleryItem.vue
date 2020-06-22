@@ -34,10 +34,13 @@ export default {
 .gallery__img {
     width: calc((100% - 20px) / 1);
     margin: 10px 10px 0 10px;
+    border: 2px solid transparent;    
 }
 .gallery__item {
-    
     text-align: center;
+}
+.gallery__img:hover {
+    border: 2px solid #303030;    
 }
 @media (min-width: 740px) {
     .gallery {

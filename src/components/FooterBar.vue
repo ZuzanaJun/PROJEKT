@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-            <span>&copy; 2020</span>       
+            <div>&copy; 2020</div>       
   </div>
 </template>
 
@@ -15,5 +15,8 @@ export default {
     text-align: center;
     background-color: rgb(154, 154, 158);
     font-size: small;
+    width: 100%;
+    position: absolute;
+    bottom: 0
 }
 </style>

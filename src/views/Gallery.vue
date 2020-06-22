@@ -53,7 +53,7 @@ export default {
 },
     components: {
         galleryitem: GalleryItem,
-         footerbar: FooterBar,
+        footerbar: FooterBar,
 
     }
 }
