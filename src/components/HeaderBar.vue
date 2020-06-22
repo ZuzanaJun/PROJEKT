@@ -24,7 +24,7 @@
                         v-if="!saveAction"
                         src="/images/btns/save.svg" alt="ulozit" class="header__save" @click="$root.$emit('saveData')">
                     <div v-else
-                        class="header__save">Koláž uložena</div>
+                        class="header__save saved_line">Koláž uložena</div>
                            
                 <img
                     class="switchPanel"                     
@@ -161,7 +161,9 @@ export default {
   visibility: visible;
   
 }
-
+.saved_line{
+    padding-top: 10px;
+}
 
 
 
