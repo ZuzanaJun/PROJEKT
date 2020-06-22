@@ -7,39 +7,39 @@
            
             <div class="icon">
             
-                <img class="iconOne" src="/icons/rotate-left.png" alt="Otočení doleva"><span>Otočení doleva</span>
+                <img class="iconOne" src="/icons/rotate-left.png" alt="Otočení doleva"><span>Otočit doleva</span>
             </div>
 
             <div class="icon">
-                <img class="iconOne" src="/icons/rotate-right.png" alt="Otočení doprava"><span> Otočení doprava</span>
+                <img class="iconOne" src="/icons/rotate-right.png" alt="Otočení doprava"><span> Otočit doprava</span>
             </div>
 
             <div class="icon">
-                <img class="iconOne" src="/icons/arrange-bring-forward.png" alt="Do popředí"><span> Do popředí</span>
+                <img class="iconOne" src="/icons/arrange-bring-forward.png" alt="Do popředí"><span>Posunout do popředí</span>
             </div>
 
             <div class="icon">
-                <img class="iconOne" src="/icons/arrange-send-backward.png" alt="Do pozadí"><span> Do pozadí</span>
+                <img class="iconOne" src="/icons/arrange-send-backward.png" alt="Do pozadí"><span>Posunout do pozadí</span>
             </div>
 
             <div class="icon">
-                <img class="iconOne" src="/icons/delete.png" alt="Smazání"><span> Smazání</span>
+                <img class="iconOne" src="/icons/delete.png" alt="Smazání"><span> Smazat ústřižek</span>
             </div>
 
             <div class="icon">
-                <img class="iconOne" src="/icons/reset.svg" alt="Smazání celého plátna"><span> Smazání celého plátna</span>
+                <img class="iconOne" src="/icons/reset.svg" alt="Smazání celého plátna"><span> Smazat celé plátno</span>
             </div>
             <div class="keybords">
-                <img class="iconOne" src="" alt=""><span>Klavesnice [delete] Smazat ústřižek</span>
+                <img class="iconOne" src="" alt=""><span>Klávesa [delete] Smazat ústřižek</span>
             </div>
             <div class="keybords">
-                <img class="iconOne" src="" alt=""><span>Klavesnice [backspace] Smazat ústřižek</span>
+                <img class="iconOne" src="" alt=""><span>Klávesa [backspace] Smazat ústřižek</span>
             </div>
             <div class="keybords">
-                <img class="iconOne" src="" alt=""><span>Klavesnice [⬆] Posunout do popředí</span>
+                <img class="iconOne" src="" alt=""><span>Klávesa [⬆] Posunout do popředí</span>
             </div>
             <div class="keybords">
-                <img class="iconOne" src="" alt=""><span>Klavesnice [⬇] Posunout do pozadí</span>
+                <img class="iconOne" src="" alt=""><span>Klávesa [⬇] Posunout do pozadí</span>
             </div>
 
 

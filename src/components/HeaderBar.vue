@@ -109,7 +109,7 @@ export default {
 
 .header__logos2 {
     position: absolute;
-    left: 70px;
+    left: 74px;
 }
 
 .header__save {
