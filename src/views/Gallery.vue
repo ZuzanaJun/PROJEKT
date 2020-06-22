@@ -11,15 +11,15 @@
                 <router-link to="/gallery">
                     <img src="/images/background/vektor_11.png" alt="logo" class="header__logo">
                 </router-link>        
-                <!-- <div class="header__shuffle-btn"></div> -->
             </div>
            
         </div>
 
         <galleryitem 
-            v-for="board in savedBoards"
+            v-for="(board, boardId) in savedBoards"
             v-bind:key="board.data.id"
             v-bind:board="board"
+            v-bind:boardId="boardId"
         > </galleryitem>
 
         <footerbar/>

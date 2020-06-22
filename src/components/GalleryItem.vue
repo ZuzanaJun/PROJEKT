@@ -1,7 +1,7 @@
 <template>
      <div class="gallery">
         <div class="gallery__item" >
-            <router-link :to="`/workspace/${board.data.id}`" @click="whatBoard">
+            <router-link :to="`/workspace/${boardId}`">
                 <img v-bind:src="board.image" alt="Koláž" class="gallery__img" />
             </router-link>
             <p class="title__img">název koláže</p>
@@ -12,12 +12,8 @@
 
 <script>
 export default {
-    methods: {
-        whatBoard(){
-            console.log(this.board.data.id);
-        }
-    },
-    props: ['board'],
+    props: ['board', 'boardId'],
+
     data() {
         return {
             
