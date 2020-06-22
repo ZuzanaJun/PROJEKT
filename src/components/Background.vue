@@ -48,15 +48,17 @@ export default {
 
 .background__item {
   text-align: right;
+  margin-right: 40px;
+  margin-top: 10px;
 }
 
 .background__img {
-  width: 60%;
-  margin: 3px;
+  width: 75%;
+  
   border: 2px solid transparent;
 }
 .background__img:hover {
-border: 2px solid #303030;
-box-shadow: 4px 10px 22px 6px rgba(48, 48, 48, 0.75);
+border: 1px solid #303030;
+box-shadow: -3px 5px 17px 4px rgba(0,0,0,0.38);
 }
 </style>
