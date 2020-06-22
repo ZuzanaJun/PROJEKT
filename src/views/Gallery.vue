@@ -4,13 +4,16 @@
 
             
         
-            <div class="header__logos">
+            <div class="header__logos1">
                 <router-link to="/workspace">
-                    <img src="/images/background/vektor_10.png" alt="logo" class="header__logo_flower">
+                <img src="/images/background/vektor_10.png" alt="logo" class="header__logo_f"><span class="tooltiptext">Kolážuj</span>
                 </router-link>
-                <router-link to="/gallery">
-                    <img src="/images/background/vektor_11.png" alt="logo" class="header__logo_cross">
-                </router-link>        
+            </div>
+                
+            <div class="header__logos2">
+                
+                <img src="/images/background/vektor_11.png" alt="logo" class="header__logo_c">
+                
             </div>
            
         </div>
@@ -79,11 +82,55 @@ export default {
     background-color: #303030;
     color: white;
     font-family: 'Bellota', cursive;
+    height: 72.2px;
     
     
 }
 
 
+.header__logo_c,
+.header__logo_f {
+    height: 50px;
+    margin: 10px 0 5px 20px;
+    
+}
+
+.header__logos1 {
+    position: absolute;
+    left: 10px;
+}
+
+
+
+.header__logo_f:hover {
+  transform: scale(1.1);
+}
+
+.header__logo_f {
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.header__logos1 .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 120px;
+  font-size: 19px;
+}
+
+
+.header__logos1:hover .tooltiptext {
+  visibility: visible;
+  
+}
 
 
 

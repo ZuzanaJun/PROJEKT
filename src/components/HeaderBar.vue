@@ -144,36 +144,25 @@ export default {
 .header__logos2 .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: rgba(255, 255, 255, 0.747) ;
-  color: #303030;
+  
+  color: white;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  top: 10px;
-  left: 110%;
+  top: 8px;
+  left: 55px;
+  font-size: 19px;
 }
 
-.header__logos2 .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  margin-top: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent rgba(255, 255, 255, 0.747) transparent transparent;
-}
 
 .header__logos2:hover .tooltiptext {
   visibility: visible;
   
 }
 
-.tooltiptext {
-    margin: 10px;
-}
+
 
 
 </style>
