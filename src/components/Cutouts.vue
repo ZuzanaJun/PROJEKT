@@ -94,7 +94,7 @@ export default {
 }
 
 .cutouts__item {
-  width: 140px;
+  width: 145px;
   height: 150px;
 }
 

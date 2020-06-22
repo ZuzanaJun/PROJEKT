@@ -91,14 +91,16 @@ export default {
 
 <style>
 
-/* .header {
+.header {
     display: flex;
     background-color: #303030;
     color: white;
     font-family: 'Bellota', cursive;
     
     align-items: center;
-} */
+     
+    justify-content: center;
+}
 
 .header__logo_cross,
 .header__logo_flower {
@@ -114,16 +116,15 @@ export default {
 
 .header__save {
     height: 40px;
-    position:absolute;
-    right: 330px;
-    top: 15px
+    
+   
     
 }
 
 .switchPanel {
     height: 43px;
     position:absolute;
-    right: 110px;
+    right: 60px;
     top: 15px
     
 }

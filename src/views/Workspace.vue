@@ -107,7 +107,7 @@ export default {
   visibility: hidden;
   width: 120px;
   background-color: rgba(255, 255, 255, 0.747) ;
-  color: #303030;
+  color: red;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
