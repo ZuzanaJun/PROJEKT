@@ -1,5 +1,6 @@
 <template>
   <div class="icon__main">
+
       <img src="/icons/info.svg" alt="info" class="infoIcon">
         
           <span class="tooltiptext">
@@ -86,9 +87,9 @@ export default {
 
 .infoIcon {
     
-    margin: 0 5px;
+    margin: 0 px;
     width: 40px;
-
+    
 
     
 }
@@ -105,15 +106,15 @@ export default {
 
 .icon__main {
   position: absolute;
-  top: 15px;
-  right: 10px;
+  bottom: 70px;
+  left: 17px;
   display: inline-block;
   
 }
 
 .icon__main .tooltiptext {
   visibility: hidden;
-  width: 350px;
+  width: 340px;
   height: 450px;
   background-color: #3030309a ;
   
@@ -122,8 +123,8 @@ export default {
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  top: 60px;
-  right: 30px;
+  bottom: -40px;
+  left: 81px;
 }
 
 .icon__main .tooltiptext::after {
