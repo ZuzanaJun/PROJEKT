@@ -3,7 +3,6 @@
         <headerbar />
         <editbuttons/>
 
-        <!-- <sidebarleft /> -->
 
         <canvasarea/>
 
@@ -13,11 +12,11 @@
         <div 
           @click="resetCanvas"
           class="reset">
-            <img src="/icons/reset.svg" alt="reset" class="iconReset" ><span class="tooltiptext">Reset</span>
+            <img src="/icons/reset.svg" alt="reset" class="iconReset" ><span class="tooltiptext">Smazání celého plátna</span>
         </div>
 
 
-        <!-- <footerbar/> -->
+
         
 
     </div>
@@ -26,7 +25,6 @@
 <script>
 import { v4 as uuidv4 } from 'uuid';
 import HeaderBar from '../components/HeaderBar.vue';
-import FooterBar from '../components/FooterBar.vue';
 
 import SidebarRight from '../components/SidebarRight.vue';
 import CanvasArea from '../components/CanvasArea.vue';
@@ -37,9 +35,7 @@ import EditButtons from '../components/EditButtons.vue';
 export default {
 
     components: {
-        headerbar: HeaderBar,
-        footerbar: FooterBar,
-        
+        headerbar: HeaderBar,        
         sidebarright: SidebarRight,
         canvasarea: CanvasArea,
         editbuttons: EditButtons,

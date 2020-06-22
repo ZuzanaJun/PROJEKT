@@ -3,12 +3,7 @@
       <img src="/icons/info.svg" alt="info" class="infoIcon">
         
           <span class="tooltiptext">
-            <div class="icon">
-                <img class="iconOne" src="/icons/undo.png" alt="Zpět"> <span> Zpět </span>
-            </div>
-            <div class="icon">
-                <img class="iconOne" src="/icons/redo.png" alt="Vpřed"><span> Vpřed </span>
-            </div>
+           
             <div class="icon">
             
                 <img class="iconOne" src="/icons/rotate-left.png" alt="Otočení doleva"><span> Otočení doleva</span>
@@ -28,6 +23,10 @@
 
             <div class="icon">
                 <img class="iconOne" src="/icons/delete.png" alt="Smazání"><span> Smazání</span>
+            </div>
+
+            <div class="icon">
+                <img class="iconOne" src="/icons/reset.svg" alt="Smazání celého plátna"><span> Smazání celého plátna</span>
             </div>
 
 

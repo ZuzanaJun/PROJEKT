@@ -22,7 +22,7 @@
             v-bind:board="board"
         > </galleryitem>
 
- 
+        <footerbar/>
         
 
       
@@ -31,7 +31,9 @@
 
 
 <script>
-import GalleryItem from '../components/GalleryItem'
+import GalleryItem from '../components/GalleryItem';
+import FooterBar from '../components/FooterBar.vue';
+
 
 export default {
     data() {
@@ -50,7 +52,9 @@ export default {
         
 },
     components: {
-        galleryitem: GalleryItem
+        galleryitem: GalleryItem,
+         footerbar: FooterBar,
+
     }
 }
 </script>
