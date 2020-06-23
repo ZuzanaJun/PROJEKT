@@ -25,14 +25,14 @@
             
 
         </div>
-
-        <galleryitem 
-            v-for="(board, boardId) in savedBoards"
-            v-bind:key="boardId"
-            v-bind:board="board"
-            v-bind:boardId="boardId"
-        > </galleryitem>
-
+        <div class="gallery">
+            <galleryitem 
+                v-for="(board, boardId) in savedBoards"
+                v-bind:key="boardId"
+                v-bind:board="board"
+                v-bind:boardId="boardId"
+            > </galleryitem>
+        </div>
         <footerbar/>
         
 
@@ -150,6 +150,20 @@ export default {
 }
 
 
-
+@media (min-width: 740px) {
+    
+    
+    
+    .gallery {
+        flex: 1 1 20%;
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+    }
+  
+    
+}
 
 </style>
