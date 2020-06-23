@@ -92,14 +92,14 @@ export default {
 <style>
 
 .header {
-    display: flex;
+    
     background-color: #303030;
     color: white;
     font-family: 'Bellota', cursive;
     
     align-items: center;
      
-    justify-content: center;
+    
 }
 
 .header__logo_cross,
@@ -116,6 +116,9 @@ export default {
 
 .header__save {
     height: 40px;
+    position: absolute;
+    top: 15px;
+    right: 220px;
     
    
     
