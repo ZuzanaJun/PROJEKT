@@ -48,7 +48,7 @@ export default {
 .edit-buttons {
   width: 30px;
   position: absolute;
-  top: 100px;
+  top: 105px;
   left: 60px;
 }
 
