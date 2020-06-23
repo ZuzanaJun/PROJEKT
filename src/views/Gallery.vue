@@ -111,7 +111,7 @@ export default {
 
 
 .header__logo_f:hover,
-.header__logo_about {
+.header__logo_about:hover {
   transform: scale(1.1);
 }
 
