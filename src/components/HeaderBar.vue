@@ -96,8 +96,8 @@ export default {
     background-color: #303030;
     color: white;
     font-family: 'Bellota', cursive;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
     
-    align-items: center;
      
     
 }
