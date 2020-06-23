@@ -12,7 +12,7 @@
         <div 
           @click="resetCanvas"
           class="reset">
-            <img src="/icons/reset.svg" alt="reset" class="iconReset" ><span class="tooltiptext">Smazat celé plátno</span>
+            <img src="/icons/reset.svg" alt="reset" class="iconReset" ><span class="tooltiptext">Smazat celé plátno i galerii</span>
         </div>
 
 
