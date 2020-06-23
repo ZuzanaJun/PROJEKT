@@ -62,13 +62,13 @@ export default {
 }
 
 .header__shuffle-btn {
-    background: linear-gradient(0deg, rgba(253,238,192,1) 0%, rgba(218,41,0,1) 21%, rgba(253,104,208,1) 45%, rgba(56,156,208,1) 70%, rgba(255,210,0,1) 100%);
-    height: 20px;
-    width: 20px;
+    background: linear-gradient(318deg, rgba(255,210,0,1) 14%, rgba(56,156,208,1) 39%, rgba(253,104,208,1) 68%, rgba(218,41,0,1) 100%);     height: 25px;
+    width: 25px;
     border-radius: 50%;
     position: absolute;
-    right: 6px;
-    top: 10px;
+    right: 5px;
+    top: 5px;
+    border: solid 1px #303030
   
 
 }
