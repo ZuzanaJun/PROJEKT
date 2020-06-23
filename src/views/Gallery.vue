@@ -20,7 +20,7 @@
 
         <galleryitem 
             v-for="(board, boardId) in savedBoards"
-            v-bind:key="board.data.id"
+            v-bind:key="boardId"
             v-bind:board="board"
             v-bind:boardId="boardId"
         > </galleryitem>

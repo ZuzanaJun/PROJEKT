@@ -68,6 +68,7 @@ export default {
           const parsedData = JSON.parse(storageData);
           if(parsedData && parsedData[this.$route.params.id]){
             this.cutsOnCanvas = parsedData[this.$route.params.id].data;
+            this.selectedBackgroundUrl = parsedData[this.$route.params.id].background;
           }
 
         };
@@ -92,7 +93,7 @@ export default {
 
   methods: {
     reloadRects() {
- if (this.$refs.moveable) {
+       if (this.$refs.moveable) {
           this.$refs.moveable.forEach(item => {
             item.updateRect();
           })
@@ -179,7 +180,9 @@ export default {
 
       parsedData[this.$route.params.id] = {
         data: this.cutsOnCanvas,
-        image: canvasData.toDataURL('image/jpeg', 0.5)
+        image: canvasData.toDataURL('image/jpeg', 0.5),
+        background: this.selectedBackgroundUrl,
+        name: 'Název koláže' 
       };
 
       window.localStorage.setItem('boards', JSON.stringify(parsedData));
