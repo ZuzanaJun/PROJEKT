@@ -38,7 +38,7 @@
         <img src="/images/fotos/DSC_5438.jpg" alt="foto" />
       </div>
 
-        <p>Kolážovník by pravděpodobně nevzniknul bez skvělého Luďka, který nám byl skvělým lektorem i oporou a jeho snaha nám předávat informace byla nekonečná, jen škoda, že lekce měli jen omezený počet hodin. </p>
+        <p>Kolážovník by pravděpodobně nevzniknul bez skvělého Luďka, který nám byl lektorem i oporou a jeho snaha nám předávat informace byla nekonečná, jen škoda, že lekce měli jen omezený počet hodin. </p>
         <p>Dalším velmi důležitým elementem byl mentor Martin Čapek, který se nezalekl složitého projektu a šel do toho s námi.</p>
 
       <div class="about_foto">
