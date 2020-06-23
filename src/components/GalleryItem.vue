@@ -4,7 +4,7 @@
             <router-link :to="`/workspace/${boardId}`">
                 <img v-bind:src="board.image" alt="Koláž" class="gallery__img" />
             </router-link>
-            <p class="title__img">název koláže</p>
+            <p class="title__img">{{board.name}}</p>
         </div>
   </div>
 
@@ -32,13 +32,13 @@ export default {
 .gallery__img {
     width: calc((100% - 20px) / 1);
     margin: 10px 10px 0 10px;
-    border: 2px solid transparent;    
+    border: 4px solid transparent;    
 }
 .gallery__item {
     text-align: center;
 }
 .gallery__img:hover {
-    border: 2px solid #303030;    
+    border: 4px solid #303030;    
 }
 
 

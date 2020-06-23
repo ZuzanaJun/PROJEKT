@@ -48,8 +48,7 @@ export default {
 
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bellota:wght@300;400;700&display=swap');
-    
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@300;400;700&display=swap');
 
 .homepage {
     background: url(/images/background/uvod03.jpg) no-repeat center center fixed;
