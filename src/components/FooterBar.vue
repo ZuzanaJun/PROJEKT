@@ -13,7 +13,7 @@ export default {
 <style>
 .footer{
     text-align: center;
-    background-color: rgb(154, 154, 158);
+    background-color: #303030;
     font-size: small;
     width: 100%;
     position: absolute;
