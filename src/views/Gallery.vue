@@ -6,7 +6,7 @@
         
             <div class="header__logos1">
                 <router-link to="/workspace">
-                <img src="/images/background/vektor_10.png" alt="logo" class="header__logo_f"><span class="tooltiptext">Kolážuj</span>
+                <img src="/images/background/vektor_10.png" alt="kolazuj" class="header__logo_f"><span class="tooltiptext">Kolážuj</span>
                 </router-link>
             </div>
                 
@@ -18,9 +18,11 @@
             
             <div class="about">
                 <router-link to="/about">
-                <img src="/images/btns/about.svg" alt="logo" class="header__logo_about">
+                <img src="/images/btns/about.svg" alt="o nas" class="header__logo_about">
                 </router-link>
             </div>
+
+            
 
         </div>
 
