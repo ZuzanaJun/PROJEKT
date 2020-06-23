@@ -40,6 +40,8 @@ export default {
 .gallery__img:hover {
     border: 2px solid #303030;    
 }
+
+
 @media (min-width: 740px) {
     .gallery {
         display: flex;

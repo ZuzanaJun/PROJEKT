@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Workspace from '../views/Workspace.vue'
 import Gallery from '../views/Gallery.vue'
-
+import About from '../views/About.vue'
 
 
 Vue.use(VueRouter)
@@ -23,6 +23,11 @@ Vue.use(VueRouter)
     path: '/gallery',
     name: 'Gallery',
     component: Gallery
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
   },
 
   

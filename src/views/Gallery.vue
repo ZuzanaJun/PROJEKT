@@ -15,7 +15,13 @@
                 <img src="/images/background/vektor_11.png" alt="logo" class="header__logo_c">
                 
             </div>
-           
+            
+            <div class="about">
+                <router-link to="/about">
+                <img src="/images/btns/about.svg" alt="logo" class="header__logo_about">
+                </router-link>
+            </div>
+
         </div>
 
         <galleryitem 
@@ -102,11 +108,13 @@ export default {
 
 
 
-.header__logo_f:hover {
+.header__logo_f:hover,
+.header__logo_about {
   transform: scale(1.1);
 }
 
-.header__logo_f {
+.header__logo_f,
+.header__logo_about {
   transition: transform 0.3s ease-in-out;
 }
 
@@ -132,7 +140,12 @@ export default {
   
 }
 
-
+.header__logo_about {
+    height: 55px;
+    position: absolute;
+    top: 6px;
+    right: 15px;
+}
 
 
 
