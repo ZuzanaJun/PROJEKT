@@ -30,8 +30,8 @@ export default {
     color: white;
 }
 .gallery__img {
-    width: calc((100% - 20px) / 1);
-    margin: 10px 10px 0 10px;
+/*     width: calc((100% - 20px) / 1);
+ */    margin: 10px 10px 0 10px;
     border: 4px solid transparent;    
 }
 .gallery__item {
