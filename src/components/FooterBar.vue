@@ -17,6 +17,7 @@ export default {
     font-size: small;
     width: 100%;
     position: absolute;
-    bottom: 0
+    bottom: 0;
+    color: white;
 }
 </style>

@@ -51,11 +51,21 @@
         <img src="/images/fotos/ma.png" alt="foto" />
       </div>
     </div>
+
+  <footerbar />
   </div>
 </template>
 
 <script>
-export default {};
+import FooterBar from '../components/FooterBar.vue';
+
+export default {
+  components: {
+        
+        footerbar: FooterBar,
+
+    }
+};
 </script>
 
 <style>
