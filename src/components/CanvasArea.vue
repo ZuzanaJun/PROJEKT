@@ -60,6 +60,8 @@ export default {
       this.$root.$on("rotateLeft", this.rotateLeft );
       this.$root.$on("rotateRight", this.rotateRight );
       this.$root.$on("resetCanvas", this.resetCanvas );
+      this.$root.$on("selectBackground", this.selectBackround);
+      this.$root.$on('saveData', this.saveData);
 
 
      if(this.$route.params.id !== undefined){
@@ -72,8 +74,6 @@ export default {
           }
 
         };
-    this.$root.$on("selectBackground", this.selectBackround);
-    this.$root.$on('saveData', this.saveData);
 
 
 
@@ -163,15 +163,14 @@ export default {
     async saveData(){
 /*       prompt('Název koláže');
   */   //   console.log(JSON.stringify(this.cutsOnCanvas));
-  const dataObj = window.localStorage.getItem('boards');
+    const dataObj = window.localStorage.getItem('boards');
 
 
     const canvasData = await html2canvas(this.$refs.canvasarea);
 
 
 
-
-            let parsedData = {};
+     let parsedData = {};
 
       if (JSON.parse(dataObj)) {
         parsedData = JSON.parse(dataObj);
@@ -182,7 +181,7 @@ export default {
         data: this.cutsOnCanvas,
         image: canvasData.toDataURL('image/jpeg', 0.5),
         background: this.selectedBackgroundUrl,
-        name: 'Název koláže' 
+        name: new Date().toLocaleString("cs-CZ")
       };
 
       window.localStorage.setItem('boards', JSON.stringify(parsedData));
