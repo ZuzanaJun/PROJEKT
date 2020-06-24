@@ -48,10 +48,10 @@
             <div class="steps">
               <ol>
                 <li>Klikni na <b>Pozadí</b> a vyber pozadí</li>
-                <li>Myší najeď na ústřižek a přetáhni na plátno, opakuj dokud nevytvoříš kompozici, která se ti líbí</li>
+                <li>Myší chytni výstřižek a přetáhni na plátno, opakuj dokud nevytvoříš kompozici, která se ti líbí</li>
                 <li>Klikni na <b>Ulož</b></li>
-                <li>V <b>Galerie</b> a můžeš vidět svůj výtvor, ale i výtvory jiných</li>
-                <li>Pokud nejsi spokojen se svým výtvorem, klikni na něj a dostaneš se zpět na plátno a můžeš pokračovat</li>
+                <li>V <b>Galerii</b> po uložení můžeš vidět svůj výtvor</li>
+                <li>Pokud máš chuť koláž dále upravovat, v galerii na obrázek klikni a{{'\xa0'}}dostaneš se zpět na plátno</li>
               </ol>
              
             

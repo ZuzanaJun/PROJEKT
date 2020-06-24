@@ -28,7 +28,7 @@
         </div>-->
       </div>
 
-      <p>Projekt Kolážovník vznikal v rámci Digitální Akademie Web pod hlavičkou Czechitas v Brně. Dohromady se daly Véra se Zuzkou, které zjistily, že mají podobnou potřebu kreativního vyjádření. S&nbsp;impulzem pro tento projekt přišla Veronika, ale nebyla to první věc co ji napadla. Hledala nějaký nápad s větším sociálním nebo edukativním dopadem, ovšem pocit, že všechno už bylo vymyšleno a&nbsp;zpracováno, ji vrátilo právě k myšlence udělat si projekt pro radost. A&nbsp;právě to, co ji baví, nabídnout i&nbsp;ostatním k&nbsp;vyzkoušení. Zuzku myšlenka nadchla, jelikož sama čas od času vyplní volný čas tím, že vezme do ruky staré časopisy, nůžky, lepidlo a vytvoří abstraktní kompozici. Holky daly hlavy dohromady a&nbsp;představa o Kolážovníku se začala formovat do realných obrysů.</p>
+      <p>Projekt Kolážovník vznikal v rámci Digitální Akademie Web pod hlavičkou Czechitas v Brně. Dohromady se daly Véra se Zuzkou, které zjistily, že mají podobnou potřebu kreativního vyjádření. S{{'\xa0'}}impulzem pro tento projekt přišla Veronika, ale nebyla to první věc co ji napadla. Hledala nějaký nápad s větším sociálním nebo edukativním dopadem, ovšem pocit, že všechno už bylo vymyšleno a{{'\xa0'}}zpracováno, ji vrátilo právě k myšlence udělat si projekt pro radost. A{{'\xa0'}}právě to, co ji baví, nabídnout i{{'\xa0'}}ostatním k{{'\xa0'}}vyzkoušení. Zuzku myšlenka nadchla, jelikož sama čas od času vyplní volný čas tím, že vezme do ruky staré časopisy, nůžky, lepidlo a vytvoří abstraktní kompozici. Holky daly hlavy dohromady a{{'\xa0'}}představa o Kolážovníku se začala formovat do realných obrysů.</p>
       <div class="about_foto">
         <img src="/images/fotos/meetmentor.jpg" alt="foto" />
       </div>
@@ -37,28 +37,28 @@
         <img class="container__image-v" src="/images/fotos/ve.jpg" alt="foto" />
         <div class="container__text-v">
           <p class="name">Veronika Zimčíková</p>
-          <p>Véra se zajímá o umění, grafický design a architekturu. Ráda se prochází městy s fotoaparátem a hledá krásu.</p>
+          <p>Véra se zajímá o umění, grafický design a{{'\xa0'}}architekturu. Ráda se prochází městy s fotoaparátem a{{'\xa0'}}hledá krásu.</p>
         </div>
       </div>
 
       <div class="container__us">
-        <img class="container__image-v" src="/images/fotos/zu.jpg" alt="foto" />
+        <img class="container__image-z" src="/images/fotos/zu.jpg" alt="foto" />
         <div class="container__text-z">
           <p class="name">Zuzana Junkerová</p>
-          <p>Zuzka má ráda všechno živé a přírodu i neživou, zejména podzemní svět jeskyní.</p>
+          <p>Zuzka má ráda všechno živé a{{'\xa0'}}přírodu i{{'\xa0'}}neživou, zejména podzemní svět jeskyní. Ve volném čase hloubá nad přírodními zákony a se zaujetím objevuje, jak věci fungují.</p>
         </div>
       </div>
 
       <div class="mentors">
         <div class="mentor">
-          <p>Dalším velmi důležitým elementem byl mentor Martin Čapek, který se nezalekl složitého projektu a&nbsp;šel do toho s námi.</p>
+          <p>Dalším velmi důležitým elementem byl mentor <strong>Martin Čapek</strong>, Frontend Team Leader v{{'\xa0'}}Notum Technologies, který se nezalekl složitého projektu a{{'\xa0'}}šel do toho s námi.</p>
           <div class="about_foto-profil">
             <img src="/images/fotos/ma.png" alt="foto" />
           </div>
         </div>
 
         <div class="mentor">
-          <p>Kolážovník by nevzniknul bez skvělého Luďka Rolečka, který nám byl lektorem i&nbsp;oporou. Jeho snaha nám předávat informace byla nekonečná, děkujeme za cenné rady a hlavně trpělivost.</p>
+          <p>Kolážovník by nevzniknul bez skvělého <strong>Luďka Rolečka</strong>, který nám byl lektorem i{{'\xa0'}}oporou. Jeho snaha nám předávat informace byla nekonečná, děkujeme za cenné rady a{{'\xa0'}}hlavně trpělivost.</p>
           <div class="about_foto-profil">
             <img src="/images/fotos/ludek.jpeg" alt="foto" />
           </div>
@@ -144,6 +144,7 @@ export default {
   /*   justify-self: flex-start;
  */
   order: 1;
+
   
 }
 .container__image-v {
