@@ -26,7 +26,7 @@ export default {
 <style>
 
 .gallery {
-    font-family: 'Bellota', cursive;
+  font-family: 'Bellota', Arial, Helvetica, sans-serif;
     color: white;
 }
 .gallery__img {
