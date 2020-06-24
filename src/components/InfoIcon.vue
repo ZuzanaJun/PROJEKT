@@ -7,17 +7,6 @@
         
           <span class="tooltiptext">
 
-            <div class="steps">
-              <ol>
-                <li>Klikni na <b>Pozadí</b> a vyber pozadí</li>
-                <li>Myší najeď na ústřižek a přetáhni na plátno, opakuj dokud nevytvoříš kompozici, která se ti líbí</li>
-                <li>Klikni na <b>Ulož</b></li>
-                <li>V <b>Galerii</b> a můžeš vidět svůj výtvor, ale i výtvory jiných</li>
-                <li>Pokud nejsi spokojen se svým výtvorem, klikni na něj a dostaneš se zpět na plátno a můžeš pokračovat</li>
-              </ol>
-             
-            
-            </div>
 
 
             <div class="article">
@@ -56,9 +45,17 @@
               </div>
             </div>
             
+            <div class="steps">
+              <ol>
+                <li>Klikni na <b>Pozadí</b> a vyber pozadí</li>
+                <li>Myší najeď na ústřižek a přetáhni na plátno, opakuj dokud nevytvoříš kompozici, která se ti líbí</li>
+                <li>Klikni na <b>Ulož</b></li>
+                <li>V <b>Galerie</b> a můžeš vidět svůj výtvor, ale i výtvory jiných</li>
+                <li>Pokud nejsi spokojen se svým výtvorem, klikni na něj a dostaneš se zpět na plátno a můžeš pokračovat</li>
+              </ol>
+             
             
-
-
+            </div>
 
             </span>
 
@@ -88,13 +85,13 @@ export default {
   text-align: left;
   display: flex;
   align-content: center;
-  margin: 10px;
+  margin: 6px;
   
 }
 
 .keybords {
   text-align: left;
-  margin: 15px 5px;
+  margin: 6px;
 }
 
 
@@ -130,7 +127,7 @@ export default {
 .icon__main .tooltiptext {
   visibility: hidden;
   width: 600px;
-  height: 580px;
+  height: 520px;
   background-color: #3030309a ;
   
   text-align: center;
@@ -167,6 +164,9 @@ export default {
   margin:  5px 20px;
 }
 
+.v-application ul, .v-application ol {
+    padding-left: 28px !important;
+}
 
 
 </style>
