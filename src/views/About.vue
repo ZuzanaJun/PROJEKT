@@ -37,7 +37,7 @@
         <img class="container__image-v" src="/images/fotos/ve.jpg" alt="foto" />
         <div class="container__text-v">
           <p class="name">Veronika Zimčíková</p>
-          <p>Véra se zajímá o umění, grafický design a architekturu.</p>
+          <p>Véra se zajímá o umění, grafický design a architekturu. Ráda se prochází městy s fotoaparátem a hledá krásu.</p>
         </div>
       </div>
 
@@ -58,7 +58,7 @@
         </div>
 
         <div class="mentor">
-          <p>Kolážovník by pravděpodobně nevzniknul bez skvělého Luďka Rolečka, který nám byl lektorem i&nbsp;oporou a jeho snaha nám předávat informace byla nekonečná, děkujeme za cenné rady a hlavně trpělivost.</p>
+          <p>Kolážovník by nevzniknul bez skvělého Luďka Rolečka, který nám byl lektorem i&nbsp;oporou. Jeho snaha nám předávat informace byla nekonečná, děkujeme za cenné rady a hlavně trpělivost.</p>
           <div class="about_foto-profil">
             <img src="/images/fotos/ludek.jpeg" alt="foto" />
           </div>
