@@ -50,7 +50,7 @@
                 <li>Klikni na <b>Pozadí</b> a vyber pozadí</li>
                 <li>Myší najeď na ústřižek a přetáhni na plátno, opakuj dokud nevytvoříš kompozici, která se ti líbí</li>
                 <li>Klikni na <b>Ulož</b></li>
-                <li>Klikni na <b>Galerie</b> a můžeš vidět tvůj výtvor, ale i výtvory jiných</li>
+                <li>V <b>Galerie</b> a můžeš vidět svůj výtvor, ale i výtvory jiných</li>
                 <li>Pokud nejsi spokojen se svým výtvorem, klikni na něj a dostaneš se zpět na plátno a můžeš pokračovat</li>
               </ol>
              
