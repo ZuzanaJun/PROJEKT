@@ -153,10 +153,12 @@ export default {
     
     
     .gallery {
-        flex: 1 1 20%;
+        flex: 0 1 30%;
         margin: 10px;
         display: flex;
+        
         flex-wrap: wrap;
+        justify-content: center;
         
         
     }
