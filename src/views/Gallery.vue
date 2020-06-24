@@ -57,10 +57,7 @@ export default {
         const dataObj = window.localStorage.getItem('boards');          
         const parsedData = JSON.parse(dataObj);
         this.savedBoards = parsedData;
-
-        console.log(parsedData);
-    
-        
+        // console.log(parsedData);      
 },
     components: {
         galleryitem: GalleryItem,
