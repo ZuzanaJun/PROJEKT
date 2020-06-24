@@ -26,23 +26,20 @@
             </div> 
         </div>
 
+        <div class="about">
+                <router-link to="/about">
+                <img src="/images/btns/about.svg" alt="o nas" class="header__logo_about">
+                </router-link>
+            </div>
+
     </div>
 </template>
 
 
 <script>
+
 export default {
-    data() {
-        return {
-            appearance: false,
-            appearanceG: false
-        }
-    },
-    // methods: {
-    //     appearText() {
-    //         this.appearance = !this.appearance
-    //     }
-    // }
+    
 }
 </script>
 
