@@ -32,7 +32,6 @@
                     v-bind:src="selectPanel ? '/images/btns/pozadi.svg' : '/images/btns/ustrizky.svg'" 
                     alt="tlacitko pozadi">
 
-                <infoicon />
             
             </div>
             <!-- <button                     
@@ -48,16 +47,11 @@
 
 
 <script>
-import InfoIcon from '../components/InfoIcon.vue';
-
 export default {
     mounted(){
         this.$root.$on('saveData', this.showAction);
         this.$root.$on('pickerClicked', this.pickerClicked);
         
-    },
-    components: {
-        infoicon: InfoIcon 
     },
 
     data(){

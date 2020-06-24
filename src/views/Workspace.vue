@@ -9,15 +9,13 @@
 
         <sidebarright />
 
+        <infoicon/>
+
         <div 
           @click="resetCanvas"
           class="reset">
             <img src="/icons/reset.svg" alt="reset" class="iconReset" ><span class="tooltiptext">Smazat celé plátno i galerii</span>
         </div>
-
-
-
-        
 
     </div>
 </template>
@@ -25,10 +23,10 @@
 <script>
 import { v4 as uuidv4 } from 'uuid';
 import HeaderBar from '../components/HeaderBar.vue';
-
 import SidebarRight from '../components/SidebarRight.vue';
 import CanvasArea from '../components/CanvasArea.vue';
 import EditButtons from '../components/EditButtons.vue';
+import InfoIcon from '../components/InfoIcon.vue';
 
 
 
@@ -39,6 +37,7 @@ export default {
         sidebarright: SidebarRight,
         canvasarea: CanvasArea,
         editbuttons: EditButtons,
+        infoicon: InfoIcon,
         
        
     },
