@@ -243,23 +243,23 @@ export default {
 /*       console.log(`Id pozadí je ${id}`);*/      
       const selected = this.dataBackgrounds.find(item => item.id === id);
       this.selectedBackgroundUrl = selected.url;
-      console.log(selected);
+      // console.log(selected);
     },
     handleDrag({ target, transform }) {
-      console.log("onDrag left, top", transform);
+      // console.log("onDrag left, top", transform);
       target.style.transform = transform;
       const idxCut = this.cutsOnCanvas.findIndex( item => item.id === this.selected);
       this.cutsOnCanvas[idxCut].transform = transform;
     },
     handleScale({ target, transform, scale }) {
-      console.log("onScale scale", scale);
+      // console.log("onScale scale", scale);
       target.style.transform = transform;
       const idxCut = this.cutsOnCanvas.findIndex( item => item.id === this.selected);
       this.cutsOnCanvas[idxCut].transform = transform;
 
     },
     handleRotate({ target, dist, transform }) {
-      console.log("onRotate", dist);
+      // console.log("onRotate", dist);
       target.style.transform = transform;
       const idxCut = this.cutsOnCanvas.findIndex( item => item.id === this.selected);
       this.cutsOnCanvas[idxCut].transform = transform;

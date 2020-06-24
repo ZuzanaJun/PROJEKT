@@ -45,7 +45,7 @@ export default {
         if(this.$route.params.id === undefined){
             this.$router.push({ path: `/workspace/${uuidv4()}` });
         }
-        console.log(this.$route.params.id);
+        // console.log(this.$route.params.id);
     },
     methods: {
       resetCanvas(){
