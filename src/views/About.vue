@@ -102,7 +102,8 @@ export default {
 .about_foto img {
   width: calc((70% - 20px) / 1);
   margin: 10px;
-  padding: 10px;
+  
+  border: 1px white solid;
 }
 
 .about__content {
@@ -143,6 +144,7 @@ export default {
   /*   justify-self: flex-start;
  */
   order: 1;
+  
 }
 .container__image-v {
   margin: 0 50px;
@@ -151,6 +153,10 @@ export default {
   /*   justify-self: flex-end;
  */
   order: 2;
+}
+
+.container__us img {
+  border: 1px white solid;
 }
 
 .container__text-z {
@@ -176,6 +182,7 @@ export default {
 .mentors img {
   height: 250px;
   margin: 10px 20px;
+  border: 1px white solid;
 }
 .mentor {
   flex-basis: 50%;
@@ -185,4 +192,6 @@ export default {
   padding: 0;
   height: 120px;
 }
+
+
 </style>
