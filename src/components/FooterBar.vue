@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-            <div>&copy; 2020</div>       
+            <div><router-link to="/about">Projekt</router-link><span> &copy; 2020</span></div>       
   </div>
 </template>
 
@@ -11,6 +11,10 @@ export default {
 </script>
 
 <style>
+.v-application a {
+  text-decoration: none;
+  color: white !important;
+}
 .footer{
     text-align: center;
     background-color: #303030;
@@ -19,7 +23,6 @@ export default {
     position: absolute;
     bottom: 0;
     color: white;
-    font-size: 34px;
-  font-family: 'Bellota', Arial, Helvetica, sans-serif;
+    font-family: 'Bellota', Arial, Helvetica, sans-serif;
 }
 </style>
