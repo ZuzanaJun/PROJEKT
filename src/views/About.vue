@@ -52,7 +52,7 @@
           </div>
         </div>
 
-      <p>Kolážovník by pravděpodobně nevzniknul bez skvělého Luďka, který nám byl lektorem i oporou a jeho snaha nám předávat informace byla nekonečná, jen škoda, že lekce měli jen omezený počet hodin. </p>
+      <p>Kolážovník by pravděpodobně nevzniknul bez skvělého Luďka Rolečka, který nám byl lektorem i oporou a jeho snaha nám předávat informace byla nekonečná, děkujeme za cenné rady a hlavně trpělivost. </p>
         <p>Dalším velmi důležitým elementem byl mentor Martin Čapek, který se nezalekl složitého projektu a šel do toho s námi.</p>
 
       <!-- <div class="about_foto-profil">
@@ -84,8 +84,6 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Bellota:wght@300;400;700&display=swap");
-
 .about__container {
   background: url(/images/background/workspace2.jpg) no-repeat center center
     fixed;
@@ -96,6 +94,9 @@ export default {
   
 }
 
+.about__content h1 {
+  padding-top: 10px;
+}
 
 .name {
     font-size: 20px;
