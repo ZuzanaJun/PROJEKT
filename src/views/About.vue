@@ -28,37 +28,45 @@
           </div> -->
       </div>
 
-      <p>Projekt Kolážovník vznikal v rámci Digitální Akademie Web. Dohromady se daly Véra se Zuzkou, které zjistily, že mají podobnou potřebu kreativního vyjádření a to právě (mimo jiné) právě v podobě koláží. S impulzem pro tento projekt přišla Veronika, ale nebyla to první věc co ji napadla. Hledala nějaký nápad s větším sociálním nebo edukativním dopadem, ovšem pocit, že všechno už bylo vymyšleno a zpracováno, ji vrátilo právě k myšlence udělat si projekt pro radost. A právě to co ji baví nabídnout i ostatním k vyzkoušení. Zuzku myšlenka zaujala a představa o Kolážovníku se začala formovat do realných obrysů.</p>
+      <p>Projekt Kolážovník vznikal v rámci Digitální Akademie Web pod hlavičkou Czechitas v Brně. Dohromady se daly Véra se Zuzkou, které zjistily, že mají podobnou potřebu kreativního vyjádření. S&nbsp;impulzem pro tento projekt přišla Veronika, ale nebyla to první věc co ji napadla. Hledala nějaký nápad s větším sociálním nebo edukativním dopadem, ovšem pocit, že všechno už bylo vymyšleno a&nbsp;zpracováno, ji vrátilo právě k myšlence udělat si projekt pro radost. A právě to, co ji baví, nabídnout i&nbsp;ostatním k&nbsp;vyzkoušení. Zuzku myšlenka nadchla, jelikož sama čas od času vyplní volný čas tím, že vezme do ruky staré časopisy, nůžky, lepidlo a vytvoří abstraktní kompozici. Holky daly hlavy dohromady a představa o Kolážovníku se začala formovat do realných obrysů.</p>
       <div class="about_foto">
-        <!-- <img src="/images/fotos/meetmentor.jpg" alt="foto" /> -->
+        <img src="/images/fotos/meetmentor.jpg" alt="foto" />
       </div>
        
 
 
 
 
-        <div class="container">
-          <img class="container__image" src="/images/fotos/ve.jpg" alt="foto" >
-          <div class="container__text">
+        <div class="container__us">
+          <img class="container__image-v" src="/images/fotos/ve.jpg" alt="foto" >
+          <div class="container__text-v">
             <p class="name">Veronika Zimčíková</p> 
-            <p>Má ráda architekturu, umění, ale i design</p>
+            <p>Véra se zajímá o umění, grafický design a architekturu.</p>
           </div>
         </div>
-        <div class="container">
-          <img class="container__image" src="/images/fotos/zu.jpg" alt="foto" >
-          <div class="container__text">
+
+        <div class="container__us">
+          <img class="container__image-v" src="/images/fotos/zu.jpg" alt="foto" >
+          <div class="container__text-z">
             <p class="name">Zuzana Junkerová</p> 
-            <p>Má ráda přírodu, zvířata, svého přítele.</p>
+            <p>Zuzka má ráda všechno živé a přírodu i neživou, zejména podzemní svět jeskyní.</p>
           </div>
         </div>
-
-      <p>Kolážovník by pravděpodobně nevzniknul bez skvělého Luďka Rolečka, který nám byl lektorem i oporou a jeho snaha nám předávat informace byla nekonečná, děkujeme za cenné rady a hlavně trpělivost. </p>
-        <p>Dalším velmi důležitým elementem byl mentor Martin Čapek, který se nezalekl složitého projektu a šel do toho s námi.</p>
-
-      <!-- <div class="about_foto-profil">
-        <img src="/images/fotos/ma.png" alt="foto" />
-      </div>
-       -->
+<div class="mentors">
+  <div>
+      <p>Dalším velmi důležitým elementem byl mentor Martin Čapek, který se nezalekl složitého projektu a&nbsp;šel do toho s námi.</p>
+      <div class="about_foto-profil">
+          <img src="/images/fotos/ma.png" alt="foto" />
+        </div>
+  </div>
+  <div>
+      <p>Kolážovník by pravděpodobně nevzniknul bez skvělého Luďka Rolečka, který nám byl lektorem i&nbsp;oporou a jeho snaha nám předávat informace byla nekonečná, děkujeme za cenné rady a hlavně trpělivost. </p>
+      <div class="about_foto-profil">
+          <img src="/images/fotos/ludek.jpeg" alt="foto" />
+        </div>
+  </div>
+</div>
+ 
 
 
 
@@ -93,12 +101,8 @@ export default {
   color: white;
   font-size: 17px;
   
-  
 }
 
-.about__content h1 {
-  padding-top: 10px;
-}
 
 .name {
     font-size: 20px;
@@ -126,11 +130,14 @@ export default {
 
 .about__content h1 {
         text-align: center;
+          padding: 10px;
+
 
 }
 
-p {
+.about__content p {
     margin: 20px;
+    padding: 15px;
     
 };
 
@@ -143,24 +150,56 @@ p {
 
 
 
-.container {
-   
+.container__us {
     display: flex;
-
+    margin: 30px;
+    padding: 40px;
    
 }
 
-.container__image {
-  margin: 0 30px;
-        width:250px;
-        object-fit: contain;
-        align-self: flex-start;
+.container__image-z {
+  margin: 0 50px;
+  width: 250px;
+  object-fit: contain;
+/*   justify-self: flex-start;
+ */
+  order: 1;
+}
+.container__image-v {
+  margin: 0 50px;
+  width: 250px;
+  object-fit: contain;
+/*   justify-self: flex-end;
+ */
+   order: 2;
 
 }
 
-.container__text {
+.container__text-z {
   flex: 1 1 auto;
   text-align: left;
+    order: 2;
+
+}
+.container__text-v {
+  flex: 1 1 auto;
+  text-align: left;
+    order: 1;
+
 }
 
+.mentors{
+  display: flex;
+  height: 150px;
+  margin: 30px;
+  text-align: center;
+
+}
+.mentors img{
+  height: 250px;
+}
+
+.mentors p {
+  height: 100px;
+}
 </style>
