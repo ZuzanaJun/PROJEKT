@@ -18,18 +18,19 @@
 
     <div class="about__content">
       <h1>Jak tento projekt vznikal</h1>
-      
-      <div class="about_foto">
-        <img src="/images/fotos/hackathon.jpg" alt="foto" />
-      </div>
+      <div class="fist_img">
+          <div class="about_foto">
+            <img src="/images/fotos/hackathon.jpg" alt="foto" />
+          </div>
 
-      <div class="about_foto">
-        <img src="/images/fotos/mym.jpg" alt="foto" />
+          <!-- <div class="about_foto">
+            <img src="/images/fotos/mym.jpg" alt="foto" />
+          </div> -->
       </div>
 
       <p>Projekt Kolážovník vznikal v rámci Digitální Akademie Web. Dohromady se daly Véra se Zuzkou, které zjistily, že mají podobnou potřebu kreativního vyjádření a to právě (mimo jiné) právě v podobě koláží. S impulzem pro tento projekt přišla Veronika, ale nebyla to první věc co ji napadla. Hledala nějaký nápad s větším sociálním nebo edukativním dopadem, ovšem pocit, že všechno už bylo vymyšleno a zpracováno, ji vrátilo právě k myšlence udělat si projekt pro radost. A právě to co ji baví nabídnout i ostatním k vyzkoušení. Zuzku myšlenka zaujala a představa o Kolážovníku se začala formovat do realných obrysů.</p>
       <div class="about_foto">
-        <img src="/images/fotos/meetmentor.jpg" alt="foto" />
+        <!-- <img src="/images/fotos/meetmentor.jpg" alt="foto" /> -->
       </div>
        
 
@@ -54,10 +55,10 @@
       <p>Kolážovník by pravděpodobně nevzniknul bez skvělého Luďka, který nám byl lektorem i oporou a jeho snaha nám předávat informace byla nekonečná, jen škoda, že lekce měli jen omezený počet hodin. </p>
         <p>Dalším velmi důležitým elementem byl mentor Martin Čapek, který se nezalekl složitého projektu a šel do toho s námi.</p>
 
-      <div class="about_foto-profil">
+      <!-- <div class="about_foto-profil">
         <img src="/images/fotos/ma.png" alt="foto" />
       </div>
-      
+       -->
 
 
 
@@ -92,7 +93,9 @@ export default {
   height: 100%;
   font-family: "Bellota", cursive;
   color: white;
+  
 }
+
 
 .name {
     font-size: 20px;
@@ -100,20 +103,19 @@ export default {
 }
 
 .about_foto img{
-    width: calc((60% - 20px) / 1);
+    width: calc((70% - 20px) / 1);
     margin: 10px;
     padding: 10px;
 }
-.about_foto-profil{
-    width: 70px;
-}
+
 
 .about__content {
 /*     flex-shrink: 1;
     margin: 10px; */
-     margin: 0 auto;
+     margin: 25px auto 60px auto;
   max-width: 50em;
  text-align: center;
+ border: 1px solid white;
 
    
 }
@@ -138,18 +140,18 @@ p {
 
 
 .container {
-    
-    padding: 20px 40px 40px;
-    max-width: 640px;
+   
     display: flex;
+
    
 }
 
 .container__image {
-  margin: 20px 30px 0 0;
+  margin: 0 30px;
         width:250px;
         object-fit: contain;
         align-self: flex-start;
+
 }
 
 .container__text {
