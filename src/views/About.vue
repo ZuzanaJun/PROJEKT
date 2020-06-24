@@ -31,26 +31,40 @@
       <div class="about_foto">
         <img src="/images/fotos/meetmentor.jpg" alt="foto" />
       </div>
-      <div class="about_foto-profil">
-        <img src="/images/fotos/ve.jpg" alt="foto" />
-      </div>
-      <div class="about_foto-profil">
-        <img src="/images/fotos/zu.jpg" alt="foto" />
-      </div>
-        <p class="name">Veronika Zimčíková</p> 
-        <p>Má ráda architekturu, umění, ale i design</p>
-        <p class="name">Zuzana Junkerova</p> 
-        <p>Má ráda přírodu, zvířata, svého přítele.</p>
-        
+       
 
 
-        <p>Kolážovník by pravděpodobně nevzniknul bez skvělého Luďka, který nám byl lektorem i oporou a jeho snaha nám předávat informace byla nekonečná, jen škoda, že lekce měli jen omezený počet hodin. </p>
+
+
+        <div class="container">
+          <img class="container__image" src="/images/fotos/ve.jpg" alt="foto" >
+          <div class="container__text">
+            <p class="name">Veronika Zimčíková</p> 
+            <p>Má ráda architekturu, umění, ale i design</p>
+          </div>
+        </div>
+        <div class="container">
+          <img class="container__image" src="/images/fotos/zu.jpg" alt="foto" >
+          <div class="container__text">
+            <p class="name">Zuzana Junkerová</p> 
+            <p>Má ráda přírodu, zvířata, svého přítele.</p>
+          </div>
+        </div>
+
+      <p>Kolážovník by pravděpodobně nevzniknul bez skvělého Luďka, který nám byl lektorem i oporou a jeho snaha nám předávat informace byla nekonečná, jen škoda, že lekce měli jen omezený počet hodin. </p>
         <p>Dalším velmi důležitým elementem byl mentor Martin Čapek, který se nezalekl složitého projektu a šel do toho s námi.</p>
 
       <div class="about_foto-profil">
         <img src="/images/fotos/ma.png" alt="foto" />
       </div>
-    </div>
+      
+
+
+
+      </div>
+
+        
+    
 
   <footerbar />
   </div>
@@ -80,12 +94,10 @@ export default {
   color: white;
 }
 
-
 .name {
     font-size: 20px;
     font-weight: bold;
 }
-    
 
 .about_foto img{
     width: calc((60% - 20px) / 1);
@@ -117,5 +129,32 @@ p {
 };
 
 
+.about_foto-profil {
+  display: flex;
+  
+}
+
+
+
+
+.container {
+    
+    padding: 20px 40px 40px;
+    max-width: 640px;
+    display: flex;
+   
+}
+
+.container__image {
+  margin: 20px 30px 0 0;
+        width:250px;
+        object-fit: contain;
+        align-self: flex-start;
+}
+
+.container__text {
+  flex: 1 1 auto;
+  text-align: left;
+}
 
 </style>
