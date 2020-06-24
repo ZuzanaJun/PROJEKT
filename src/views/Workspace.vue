@@ -63,8 +63,6 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@300;400;700&display=swap');
-
 .workspace {
     /* background-image: url('/images/background/workspace2.jpg'); */
     background: url(/images/background/workspace2.jpg) no-repeat center center fixed;
@@ -72,7 +70,7 @@ export default {
     height: 100%;
     /* overflow: hidden; */
     background-color: #303030;
-    font-family: 'Bellota', cursive;
+    font-family: 'Bellota', Arial, Helvetica, sans-serif;
 }
 
 .workspace::-webkit-scrollbar {

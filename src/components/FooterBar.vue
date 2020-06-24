@@ -19,5 +19,7 @@ export default {
     position: absolute;
     bottom: 0;
     color: white;
+    font-size: 34px;
+  font-family: 'Bellota', Arial, Helvetica, sans-serif;
 }
 </style>

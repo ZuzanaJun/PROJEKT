@@ -95,7 +95,7 @@ export default {
     
     background-color: #303030;
     color: white;
-    font-family: 'Bellota', cursive;
+    font-family: 'Bellota', Arial, Helvetica, sans-serif;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
     
      

@@ -110,6 +110,7 @@ export default {
   left: 17px;
   display: inline-block;
   z-index: 2147483647;
+  font-family: 'Bellota', Arial, Helvetica, sans-serif;
   
 }
 
