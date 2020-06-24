@@ -103,14 +103,34 @@ export default {
   /*     this.cutsOnCanvas = [];
        window.localStorage.removeItem('boards'); */
 
-      const storageData = window.localStorage.getItem('boards');
+      // const storageData = window.localStorage.getItem('boards');
+      // const parsedData = JSON.parse(storageData);
+      // this.cutOnCanvas = [];
+      // if(parsedData && parsedData[this.$route.params.id]){
+      //   parsedData[this.$route.params.id] = [];
+      // }
+      // window.localStorage.setItem('boards', JSON.stringify(parsedData));
+      // if(this.$route.params.id === undefined){
+      //       this.$router.push({ path: `/workspace/${uuidv4()}` });
+      //  }
 
+      // this.cutsOnCanvas = [];
+      // const storageData = window.localStorage.getItem('boards');
+      // const parsedData = JSON.parse(storageData);
+      // if(parsedData && parsedData[this.$route.params.id]){
+      //    parsedData[this.$route.params.id] = [];
+      // }
+      // window.localStorage.setItem('boards', JSON.stringify(parsedData));
+
+
+      const storageData = window.localStorage.getItem('boards');
       const parsedData = JSON.parse(storageData);
       if(parsedData && parsedData[this.$route.params.id]){
         this.cutsOnCanvas = [];
       }
-    },
 
+
+    },
     rotateLeft(){
       const regex = /rotate\((.*?)deg\)/;
 
