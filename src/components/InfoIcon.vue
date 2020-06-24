@@ -32,7 +32,7 @@
               </div>
 
               <div class="icon">
-                  <img class="iconOne" src="/icons/reset.svg" alt="Smazání celého plátna"><span> Smazat celé plátno</span>
+                  <img class="iconOne" src="/icons/reset.svg" alt="Smazání celého plátna"><span> Smazat celou koláž</span>
               </div>
               <div class="keybords">
                   <img class="iconOne" src="" alt=""><span>Klávesa [delete] Smazat ústřižek</span>
