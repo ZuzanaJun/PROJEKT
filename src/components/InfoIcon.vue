@@ -33,9 +33,6 @@
                 <img class="iconOne" src="" alt=""><span>Klávesa [delete] Smazat ústřižek</span>
             </div>
             <div class="keybords">
-                <img class="iconOne" src="" alt=""><span>Klávesa [backspace] Smazat ústřižek</span>
-            </div>
-            <div class="keybords">
                 <img class="iconOne" src="" alt=""><span>Klávesa [⬆] Posunout do popředí</span>
             </div>
             <div class="keybords">
@@ -111,6 +108,7 @@ export default {
   display: inline-block;
   z-index: 2147483647;
   font-family: 'Bellota', Arial, Helvetica, sans-serif;
+  color: white;
   
 }
 
