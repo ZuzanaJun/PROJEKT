@@ -95,6 +95,7 @@ export default {
   color: white;
   font-size: 17px;
   
+  
 }
 
 
@@ -117,6 +118,7 @@ export default {
   max-width: 50em;
  text-align: center;
  border: 1px solid white;
+ padding: 20px 0;
 
    
 }
