@@ -93,6 +93,7 @@ export default {
   height: 100%;
   font-family: "Bellota", cursive;
   color: white;
+  font-size: 17px;
   
 }
 
