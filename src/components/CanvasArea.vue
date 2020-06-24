@@ -100,9 +100,17 @@ export default {
         }
     },
     resetCanvas(){
-      this.cutsOnCanvas = [];
-       window.localStorage.removeItem('boards');
+  /*     this.cutsOnCanvas = [];
+       window.localStorage.removeItem('boards'); */
+
+      const storageData = window.localStorage.getItem('boards');
+
+      const parsedData = JSON.parse(storageData);
+      if(parsedData && parsedData[this.$route.params.id]){
+        this.cutsOnCanvas = [];
+      }
     },
+
     rotateLeft(){
       const regex = /rotate\((.*?)deg\)/;
 
@@ -161,8 +169,8 @@ export default {
 
 
     async saveData(){
-/*       prompt('Název koláže');
-  */   //   console.log(JSON.stringify(this.cutsOnCanvas));
+
+  //   console.log(JSON.stringify(this.cutsOnCanvas));
     const dataObj = window.localStorage.getItem('boards');
 
 

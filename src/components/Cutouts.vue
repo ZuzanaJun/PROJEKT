@@ -61,7 +61,10 @@ export default {
       console.log(e.x - el.x); */
       this.offsetX = e.x - el.x;
       this.offsetY = e.y - el.y;
-    }
+    },
+    addPiece(cut){
+    this.$root.$emit('addPiece', cut);
+    },  
   },
   
   
