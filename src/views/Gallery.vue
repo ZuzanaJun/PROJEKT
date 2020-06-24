@@ -143,7 +143,7 @@ export default {
 .header__logo_about {
     height: 52px;
     position: absolute;
-    top: 7px;
+    top: 9px;
     right: 15px;
 }
 
