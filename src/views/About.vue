@@ -48,6 +48,7 @@
           <p>Zuzka má ráda všechno živé a přírodu i neživou, zejména podzemní svět jeskyní.</p>
         </div>
       </div>
+
       <div class="mentors">
         <div class="mentor">
           <p>Dalším velmi důležitým elementem byl mentor Martin Čapek, který se nezalekl složitého projektu a&nbsp;šel do toho s námi.</p>
@@ -55,13 +56,17 @@
             <img src="/images/fotos/ma.png" alt="foto" />
           </div>
         </div>
+
         <div class="mentor">
           <p>Kolážovník by pravděpodobně nevzniknul bez skvělého Luďka Rolečka, který nám byl lektorem i&nbsp;oporou a jeho snaha nám předávat informace byla nekonečná, děkujeme za cenné rady a hlavně trpělivost.</p>
           <div class="about_foto-profil">
             <img src="/images/fotos/ludek.jpeg" alt="foto" />
           </div>
         </div>
+
+        
       </div>
+      
     </div>
 
     <footerbar />
@@ -164,10 +169,13 @@ export default {
   height: 150px;
   margin: 30px;
   text-align: center;
+  /* border: 2px solid green; */
+  height: 400px;
+  
 }
 .mentors img {
   height: 250px;
-  margin: 10px;
+  margin: 10px 20px;
 }
 .mentor {
   flex-basis: 50%;
