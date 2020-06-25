@@ -32,6 +32,12 @@
                     v-bind:src="selectPanel ? '/images/btns/pozadi.svg' : '/images/btns/ustrizky.svg'" 
                     alt="tlacitko pozadi">
 
+                <div class="header__gallery">
+                    <router-link to="/gallery">
+                        <img src="/images/btns/galerie.svg" alt="galerie" class="header__logo_gallery">
+                    </router-link>
+            </div>
+
             
             </div>
             <!-- <button                     
@@ -112,7 +118,7 @@ export default {
     height: 40px;
     position: absolute;
     top: 15px;
-    right: 220px;
+    right: 360px;
     
    
     
@@ -126,12 +132,21 @@ export default {
     
 }
 
+.header__logo_gallery {
+    height: 43px;
+    position:absolute;
+    right: 205px;
+    top: 13px
+}
+
+.header__logo_gallery:hover,
 .header__logo_cross:hover,
 .header__save:hover,
 .switchPanel:hover {
   transform: scale(1.1);
 }
 
+.header__logo_gallery,
 .header__logo_cross,
 .header__save,
 .switchPanel {
