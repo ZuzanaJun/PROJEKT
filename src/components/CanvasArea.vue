@@ -95,8 +95,16 @@ export default {
       }
     },
     resetCanvas() {
-      /*     this.cutsOnCanvas = [];
-       window.localStorage.removeItem('boards'); */
+      this.cutsOnCanvas = [];
+      this.selectBackround(1000);
+      
+      // this.$router.push({ path: `/workspace/${uuidv4()}` });
+       
+
+ /*  */
+      //    this.cutsOnCanvas = [];
+      //  window.localStorage.removeItem('boards');
+ /*  */
 
       // const storageData = window.localStorage.getItem('boards');
       // const parsedData = JSON.parse(storageData);
@@ -108,7 +116,7 @@ export default {
       // if(this.$route.params.id === undefined){
       //       this.$router.push({ path: `/workspace/${uuidv4()}` });
       //  }
-
+/*  */
       // this.cutsOnCanvas = [];
       // const storageData = window.localStorage.getItem('boards');
       // const parsedData = JSON.parse(storageData);
@@ -116,15 +124,23 @@ export default {
       //    parsedData[this.$route.params.id] = [];
       // }
       // window.localStorage.setItem('boards', JSON.stringify(parsedData));
+/*  */
+      // this.cutsOnCanvas = [];
+      // this.selectBackround(1000);
+      // let parsedData = {};
 
-      this.cutsOnCanvas = [];
-      const storageData = window.localStorage.getItem("boards");
-      const parsedData = JSON.parse(storageData);
-      if (parsedData && parsedData[this.$route.params.id]) {
-        parsedData[this.$route.params.id] = null;
-        window.localStorage.setItem('boards', JSON.stringify(parsedData));
-      }
-      this.selectBackround(1000);
+      // const storageData = window.localStorage.getItem("boards");
+      //  if (JSON.parse(storageData)) {
+      //   parsedData = JSON.parse(storageData);
+      // }
+      // console.log(parsedData);
+      // console.log(this.$route.params.id);
+      // const toDelete = parsedData[this.$route.params.id];
+      // console.log(toDelete);
+      // const newObj = parsedData.map(item => item !== toDelete);
+      // window.localStorage.setItem('boards', JSON.stringify(newObj));
+/*  */
+  
     },
 
 
