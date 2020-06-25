@@ -1,19 +1,19 @@
-# kolazovnik
+Kolážovník je aplikace pro tvorbu abstraktních kompozic v podobě koláží.
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+1. Klikni na Pozadí a vyber pozadí.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+2. Myší chytni výstřižek a přetáhni na plátno, opakuj dokud nevytvoříš kompozici, která se ti líbí.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+3. Klikni na Ulož.
+
+4. V Galerii po uložení můžeš vidět svůj výtvor.
+
+5. Pokud máš chuť koláž dále upravovat, v galerii na obrázek klikni a dostaneš se zpět na plátno.
+
+
+
+
+
+
+Jen do toho! Véra a Zuzka ti přejí příjemné tvoření.

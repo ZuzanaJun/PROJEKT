@@ -41,9 +41,7 @@
         </div>
       </div>
 
-      <div class="container__us">
-        <img class="container__image-z" src="/images/fotos/zu.jpg" alt="foto" />
-        <div class="container__text-z">
+      <div class="container__us"><img class="container__image-z" src="/images/fotos/zu.jpg" alt="foto" /><div class="container__text-z">
           <p class="name">Zuzana Junkerová</p>
           <p>Zuzka má ráda všechno živé a{{'\xa0'}}přírodu i{{'\xa0'}}neživou, zejména podzemní svět jeskyní. Ve volném čase hloubá nad přírodními zákony a se zaujetím objevuje, jak věci fungují.</p>
         </div>
